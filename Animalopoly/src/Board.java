@@ -64,7 +64,10 @@ public class Board
             //print out that spaces name and information
             System.out.println(space.getName()+"\n"+space.getInfo());
             //check if that space has been bought
-            if()
+            if(space.getUpgradeLevel==0)
+            {
+
+            }
         }
         else
         {
