@@ -59,8 +59,12 @@ public class Board
             {
                 player.setPosition(player.getPosition()-26);
             }
+            //assign space to the current space's object
+            Spaces space = spaces.get(player.getPosition());
             //print out that spaces name and information
-            System.out.println(spaces.get(player.getPosition()).getName()+"\n"+spaces.get(player.getPosition()).getInfo());
+            System.out.println(space.getName()+"\n"+space.getInfo());
+            //check if that space has been bought
+            if()
         }
         else
         {
