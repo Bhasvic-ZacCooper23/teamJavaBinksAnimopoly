@@ -4,7 +4,7 @@ public class Die {
     public Random random = new Random();
 
     public int roll() {
-        return random.nextInt(8)-1; // create random number between 0 and 6
+        return random.nextInt(6)+1; // create random number between 1 and 6
 
     }
 }
