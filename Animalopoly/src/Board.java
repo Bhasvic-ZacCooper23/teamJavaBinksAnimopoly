@@ -25,10 +25,10 @@ public class Board {
         for (int i = 0; i < lim; i++) {
             // add them to array
             players.add(new Players());
-            System.out.println("What's player " + i + "'s name?");
+            System.out.println("What's player " + (i+1) + "'s name?");
             // set their name
             players.get(i).setName(scanner.nextLine());
-            System.out.println("What's player " + i + "'s symbol?");
+            System.out.println("What's player " + (i+1) + "'s symbol?");
             // and their character
             players.get(i).setCharacter(scanner.nextLine().charAt(0));
         }
@@ -70,13 +70,13 @@ public class Board {
                 // print out that spaces name and information
                 System.out.println(space.getName() + "\n" + space.getInfo());
                 // check if that space has been bought
-                if (space.getUpgradeLevel == 0) {
+                if (space.getUpgradeLevel() == 0) {
                     System.out.println("This space has not been bought. It costs: " + space.getUpgradePrice() + " \n Would you like to buy it?(Y/N)");
                     //if they want to buy it
                     if (scanner.nextLine().equals("Y")) {
                         if (player.getMoney() >= space.getUpgradePrice()) {
                             //take their money for the purchase
-                            player.setMoney(player.getMoney() - space.getUpgradePrice);
+                            player.setMoney(player.getMoney() - space.getUpgradePrice());
                             space.setUpgradeLevel(1);
                             space.setOwner(playerNum);
                             //display the rent of the space
