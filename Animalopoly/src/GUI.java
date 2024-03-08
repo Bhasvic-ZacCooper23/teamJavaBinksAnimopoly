@@ -52,13 +52,13 @@ public class GUI extends JFrame{
                         textPane2.setText(spacesList.get(spaceNum).getName());
                         break;
                     case 1:
-                        textPane2.setText(spacesList.get(spaceNum).getFact());
+                        textPane2.setText(spacesList.get(spaceNum).getInfo());
                         break;
                     case 2:
                         textPane2.setText(String.valueOf(spacesList.get(spaceNum).getUpgradePrice()));
                         break;
                     case 3:
-                        textPane2.setText(String.valueOf(spacesList.get(spaceNum).getLevel()));
+                        textPane2.setText(String.valueOf(spacesList.get(spaceNum).getUpgradeLevel()));
                         break;
                     case 4:
                         spacesList.get(spaceNum).upgrade();

@@ -50,8 +50,19 @@ public class Spaces {
 
     //placeholder for rent code, please do rent ASAP Robert
 
-    public int getRent()
-    {
-        return 50;
+    public int getRent(){
+        int rent;
+
+        switch(upgradeLevel){
+            case 1:
+                rent = 50;
+            case 2:
+                rent = 100;
+            case 3:
+                rent = 200;
+            default:
+                rent = 999;
+        }
+        return rent;
     }
 }
