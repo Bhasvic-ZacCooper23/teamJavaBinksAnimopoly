@@ -30,6 +30,9 @@ public class Board {
             System.out.println("What's player " + (i+1) + "'s symbol?");
             // and their character
             players.get(i).setCharacter(scanner.nextLine().charAt(0));
+            // set their initial money & position at go
+            players.get(i).setMoney(1500);
+            players.get(i).setPosition(0);
         }
         System.out.println("Done initialising, lets play!");
     }
