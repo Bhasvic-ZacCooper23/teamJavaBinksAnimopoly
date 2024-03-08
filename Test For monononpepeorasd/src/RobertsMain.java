@@ -7,7 +7,7 @@ public class RobertsMain extends JFrame{
             public static void main(String[] args) {
                 ArrayList<Spaces> spaces = new ArrayList<Spaces>();
 
-                for (int i = 1; i < 27; i++) {
+                for (int i = 0; i < 27; i++) {
                     spaces.add(new Spaces(i));
                 }
 
