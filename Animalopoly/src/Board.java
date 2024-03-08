@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Random;
 
 public class Board {
     // initialise all object arrays
@@ -8,18 +9,17 @@ public class Board {
     Cards cards = new Cards();
     // initialise the won bool
     Boolean won = false;
+    // initialises the scanner, always useful
+    Scanner scanner = new Scanner(System.in);
 
     public void intitialise()
     {
-        // initialises the scanner, always useful
-        Scanner scanner = new Scanner(System.in);
         // add 26 spaces
         for (int i = 0; i < 26; i++) {
             spaces.add(new Spaces(i));
         }
         System.out.println("How many players?");
         int lim = Integer.parseInt(scanner.nextLine());
-        Players player = new Players();
 
         // create a player class per player asked for
         for (int i = 0; i < lim; i++) {
@@ -31,17 +31,19 @@ public class Board {
             System.out.println("What's player " + (i+1) + "'s symbol?");
             // and their character
             players.get(i).setCharacter(scanner.nextLine().charAt(0));
+            // set their initial money & position at go
+            players.get(i).setMoney(1500);
+            players.get(i).setPosition(0);
         }
+        System.out.println("Done initialising, lets play!");
     }
 
     public void doATurn(int playerNum)
     {
-        // initialises the scanner, always useful
-        Scanner scanner = new Scanner(System.in);
         // assign player to the current player's object
         Players player = players.get(playerNum);
         // check they haven't lost
-        if(player.getLost())
+        if(!player.getLost())
         {
             // check if their turn has been skipped
             if (!player.getSkippedTurn())
@@ -55,7 +57,10 @@ public class Board {
                 if (roll1 == roll2) {
                     System.out.println("You rolled a " + (roll1 + roll2) + "!\nand it was a double!");
                     // get a card
-                    System.out.println(cards.getCard(1));
+                    Random random = new Random();
+                    int cardNum = random.nextInt(21);
+                    System.out.println(cards.getCard(cardNum));
+                    //performs card's action
                 } else {
                     System.out.println("You rolled a " + (roll1 + roll2));
                 }
