@@ -8,18 +8,17 @@ public class Board {
     Cards cards = new Cards();
     // initialise the won bool
     Boolean won = false;
+    // initialises the scanner, always useful
+    Scanner scanner = new Scanner(System.in);
 
     public void intitialise()
     {
-        // initialises the scanner, always useful
-        Scanner scanner = new Scanner(System.in);
         // add 26 spaces
         for (int i = 0; i < 26; i++) {
             spaces.add(new Spaces(i));
         }
         System.out.println("How many players?");
         int lim = Integer.parseInt(scanner.nextLine());
-        Players player = new Players();
 
         // create a player class per player asked for
         for (int i = 0; i < lim; i++) {
@@ -32,16 +31,15 @@ public class Board {
             // and their character
             players.get(i).setCharacter(scanner.nextLine().charAt(0));
         }
+        System.out.println("Done initialising, lets play!");
     }
 
     public void doATurn(int playerNum)
     {
-        // initialises the scanner, always useful
-        Scanner scanner = new Scanner(System.in);
         // assign player to the current player's object
         Players player = players.get(playerNum);
         // check they haven't lost
-        if(player.getLost())
+        if(!player.getLost())
         {
             // check if their turn has been skipped
             if (!player.getSkippedTurn())
