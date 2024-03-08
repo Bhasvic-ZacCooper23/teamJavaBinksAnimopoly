@@ -21,7 +21,7 @@ public class Spaces {
         System.out.println(fact);
     }
 
-    public String getFact(){
+    public String getInfo(){
         return fact;
     }
 
@@ -34,9 +34,24 @@ public class Spaces {
 
     public int getUpgradePrice(){return upgradePrice;}
 
-    public int getLevel(){return upgradeLevel;}
+    public void setUpgradePrice(int upgradePrice) {
+        this.upgradePrice = upgradePrice;
+    }
+
+    public int getUpgradeLevel(){return upgradeLevel;}
+
+    public void setUpgradeLevel(int upgradeLevel) {
+        this.upgradeLevel = upgradeLevel;
+    }
 
     public void setOwner(int ownNum){owner = ownNum;}
 
     public int getOwner(){return owner;}
+
+    //placeholder for rent code, please do rent ASAP Robert
+
+    public int getRent()
+    {
+        return 50;
+    }
 }
