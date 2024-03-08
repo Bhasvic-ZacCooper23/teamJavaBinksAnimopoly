@@ -8,51 +8,10 @@ public class Players {
     private boolean skippedTurn;
     private boolean lost;
     private int position;
-<<<<<<< Updated upstream
-import java.util.Scanner;
-
-public class Players
-{
-    int position;
-    int money;
-    public void Main(String[] args)
-    {
-        setMoney(500);
-        setPosition(0);
-    }
-    public String setName(String s)
-    {
-        Scanner scanner = new Scanner(System.in);
-        String nickname = scanner.nextLine();
-        return nickname;
-    }
-    public void setMoney(int num) {
-        money = num;
-        System.out.println(this.setName() + " has " + money + "£");
-    }
-    public int getPosition()
-    {
-        return position;
-    }
-    public void setPosition(int num)
-    {
-        position = num;
-
-    }
-    public boolean skippedTurn()
-    {
-        boolean check = this.getPosition() == 2;
-        return check;
-    }
-    public void getCard()
-    {
-
-    }
->>>>>>> Stashed changes
-=======
     private int die;
->>>>>>> Stashed changes
 
+
+ 
     /**
      * Sets the name of the player.
      * 
