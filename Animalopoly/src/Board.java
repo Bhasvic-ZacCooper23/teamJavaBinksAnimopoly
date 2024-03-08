@@ -4,18 +4,20 @@ import java.util.Scanner;
 public class Board {
     // initialise all object arrays
     ArrayList<Spaces> spaces = new ArrayList<>();
-    ArrayList<Players> players = new ArrayList<>();[]
+    ArrayList<Players> players = new ArrayList<>();
     Cards cards = new Cards();
     // initialise the won bool
     Boolean won = false;
 
-    public void intitialise() {
+    public void intitialise()
+    {
+        // initialises the scanner, always useful
+        Scanner scanner = new Scanner(System.in);
         // add 26 spaces
         for (int i = 0; i < 26; i++) {
             spaces.add(new Spaces(i));
         }
         System.out.println("How many players?");
-        Scanner scanner = new Scanner(System.in);
         int lim = Integer.parseInt(scanner.nextLine());
         Players player = new Players();
 
@@ -32,7 +34,10 @@ public class Board {
         }
     }
 
-    public void doATurn(int playerNum) {
+    public void doATurn(int playerNum)
+    {
+        // initialises the scanner, always useful
+        Scanner scanner = new Scanner(System.in);
         // assign player to the current player's object
         Players player = players.get(playerNum);
 <<<<<<< Updated upstream
@@ -70,12 +75,26 @@ public class Board {
             // print out that spaces name and information
             System.out.println(space.getName() + "\n" + space.getInfo());
             // check if that space has been bought
-            if (space.getUpgradeLevel == 0) {
-
+            if (space.getUpgradeLevel == 0)
+            {
+                System.out.println("This space has not been bought. \n Would you like to buy it?(Y/N)");
+                //if they want to buy it
+                if(scanner.nextLine().equals("Y"))
+                {
+                    if(player.getMoney()>=space.getUpgradePrice())
+                    {
+                        //take their money for the purchase
+                        player.setMoney(player.getMoney()-space.getUpgradePrice);
+                        space.setUpgradeLevel(1);
+                        space.setOwner(playerNum);
+                        //display the rent of the space
+                        System.out.println("This exhibit will cost "+space.getRent()+" to view");
+                    }
+                }
             }
         } else {
             // if they've been skipped let them know and unskip them
-            System.out.println("Your turn has been skipped");
+            System.out.println("Player "+playerNum+", your turn has been skipped");
             player.setSkippedTurn(false);
         }
     }
