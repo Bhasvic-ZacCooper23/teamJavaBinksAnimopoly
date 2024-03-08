@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 /**
  * The Players class represents a player in the Animalopoly game.
  */
@@ -9,6 +8,7 @@ public class Players {
     private boolean skippedTurn;
     private boolean lost;
     private int position;
+<<<<<<< Updated upstream
 import java.util.Scanner;
 
 public class Players
@@ -48,6 +48,9 @@ public class Players
     {
 
     }
+>>>>>>> Stashed changes
+=======
+    private int die;
 >>>>>>> Stashed changes
 
     /**
@@ -158,5 +161,12 @@ public class Players
      */
     public void leaveGame() {
         this.setLost(true);
+    }
+    /**
+     * Sets the random number player will go.
+     */
+    public void rolledDice(){
+        Die die = new Die();
+        this.die = die.roll();
     }
 }
