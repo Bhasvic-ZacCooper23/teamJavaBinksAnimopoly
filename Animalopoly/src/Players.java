@@ -9,7 +9,6 @@ public class Players {
     private boolean skippedTurn;
     private boolean lost;
     private int position;
-=======
 import java.util.Scanner;
 
 public class Players

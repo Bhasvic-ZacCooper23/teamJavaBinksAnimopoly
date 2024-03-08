@@ -40,20 +40,15 @@ public class Board {
         Scanner scanner = new Scanner(System.in);
         // assign player to the current player's object
         Players player = players.get(playerNum);
-<<<<<<< Updated upstream
         // check if their turn has been skipped
         if (!player.getSkippedTurn()) {
             System.out.println("It's " + player.getName() + "'s turn!" + "\n type 'roll' to roll your dice!");
-            // create and roll the dice
-            Die dice = new Die();
-=======
         //check if their turn has been skipped
         if(!player.getSkippedTurn())
         {
             System.out.println("It's "+player.getName + "'s turn!" + "\n type 'roll' to roll your dice!");
+            Die dice = new Die();
             //create and roll the dice
-            Dice dice = new Dice();
->>>>>>> Stashed changes
             int roll1 = dice.roll();
             int roll2 = dice.roll();
             // check for a double
