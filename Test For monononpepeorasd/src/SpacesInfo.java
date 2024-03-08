@@ -104,7 +104,7 @@ public class SpacesInfo {
                         "\n" +
                         "Where? EVERYWHERE.\n" +
                         "\n" +
-                        "How big? Adult capybaras grow to 106 to 134 cm (3.48 to 4.40 ft) in length, stand 50 to 62 cm (20 to 24 in) tall at the withers, and typically weigh 35 to 66 kg (77 to 146 lb), with males being heavier than females.\n" +
+                        "How big? The smallest known adult dog was a Yorkshire Terrier that stood only 6.3 cm (2.5 in) at the shoulder, 9.5 cm (3.7 in) in length along the head and body, and weighed only 113 grams (4.0 oz). The heaviest dog was an English Mastiff named Zorba which weighed 314 pounds (142 kg).[2] The tallest known adult dog is a Great Dane that stands 106.7 cm (42.0 in) at the shoulder.\n" +
                         "\n" +
                         "Endangered? Not at all.\n" +
                         "\n";
