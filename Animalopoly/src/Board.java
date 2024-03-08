@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Random;
 
 public class Board {
     // initialise all object arrays
@@ -56,7 +57,10 @@ public class Board {
                 if (roll1 == roll2) {
                     System.out.println("You rolled a " + (roll1 + roll2) + "!\nand it was a double!");
                     // get a card
-                    System.out.println(cards.getCard(1));
+                    Random random = new Random();
+                    int cardNum = random.nextInt(21);
+                    System.out.println(cards.getCard(cardNum));
+                    //performs card's action
                 } else {
                     System.out.println("You rolled a " + (roll1 + roll2));
                 }
