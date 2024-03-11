@@ -28,7 +28,7 @@ public class Cards
                 words = "Your estranged grandma dies. Gain £2000";
                 break;
             case 7:
-                words = "You marry the partner of your dreams. Lose £2000 to pay for the wedding";
+                words = "You marry the partner of your dreams. Lose £500 to pay for the wedding";
                 break;
             case 8:
                 words = "You see an ULTIMATE SHREW and buy it immediately because its so cool. Lose £100 but its worth it.";
@@ -36,7 +36,12 @@ public class Cards
             case 9:
                 words = "You discover a new species, gain nothing.";
                 break;
-
+            case 10:
+                words  = "Gain £100 through suspicious means";
+                break;
+            case 11:
+                words = "Committed tax evasion, gain £300";
+                break;
             default:
                 words = "MAJOR CARD ERRREREOR";
         }
