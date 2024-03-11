@@ -133,38 +133,137 @@ public class SpacesInfo {
             case 7:
                 return "Latin: Giraffa camelopardalis\n" +
                         "\n" +
-                        "What? The giraffe is a large African hoofed mammal belonging to the genus Giraffa." +
+                        "What? The giraffe is a large (very tall) African hoofed mammal belonging to the genus Giraffa." +
                         "\n" +
-                        "Where? Foxes live on every continent except Antarctica.\n" +
+                        "Where? Its scattered range extends from Chad in the north to South Africa in the south, and from Niger in the west to Somalia in the east.\n" +
                         "\n" +
-                        "How big? males weigh on average between 4.1 and 8.7 kilograms (9 and 19+1⁄4 pounds),[7] while the smallest species, the fennec fox, weighs just 0.7 to 1.6 kg (1+1⁄2 to 3+1⁄2 lb).\n" +
+                        "How big? Fully grown giraffes stand 4.3–5.7 m (14–19 ft) tall, with males taller than females.[47] The average weight is 1,192 kg (2,628 lb) for an adult male and 828 kg (1,825 lb) for an adult female.\n" +
+                        "\n" +
+                        "Endangered? Two subspecies are classified as endangered.\n" +
+                        "\n";
+            case 8:
+                return "Latin: Equus caballus\n" +
+                        "\n" +
+                        "What? The horse is a domesticated, one-toed, hoofed mammal." +
+                        "\n" +
+                        "Where? EVERYWHERE.\n" +
+                        "\n" +
+                        "How big? The size of horses varies by breed, but also is influenced by nutrition. Light-riding horses usually range in height from 14 to 16 hands (56 to 64 inches, 142 to 163 cm) and can weigh from 380 to 550 kilograms (840 to 1,210 lb).[25] Larger-riding horses usually start at about 15.2 hands (62 inches, 157 cm) and often are as tall as 17 hands (68 inches, 173 cm), weighing from 500 to 600 kilograms (1,100 to 1,320 lb).[26] Heavy or draft horses are usually at least 16 hands (64 inches, 163 cm) high and can be as tall as 18 hands (72 inches, 183 cm) high. They can weigh from about 700 to 1,000 kilograms (1,540 to 2,200 lb)\n" +
                         "\n" +
                         "Endangered? Not at all.\n" +
                         "\n";
-            case 8:
-                return "Horse";
             case 9:
-                return "Iguana";
+                return "Latin: Iguana iguana\n" +
+                        "\n" +
+                        "What? Iguana is a genus of herbivorous lizards." +
+                        "\n" +
+                        "Where? Iguanas are native to tropical areas of Mexico, Central America, South America, and the Caribbean.\n" +
+                        "\n" +
+                        "How big? Iguanas are large lizards that can range from 1.2 to 2.0 m (4 to 6.5 ft) in length, including their tails.\n" +
+                        "\n" +
+                        "Endangered? Iguanas are among the world's most endangered animals.\n" +
+                        "\n";
             case 10:
-                return "Jaguar";
+                return "Latin: Panthera onca\n" +
+                        "\n" +
+                        "What? The jaguar is a large cat species of the genus Panthera." +
+                        "\n" +
+                        "Where? The jaguar is native to the Americas.\n" +
+                        "\n" +
+                        "How big? Jaguars can have a body length of up to 1.85 m (6 ft 1 in) and a weight of up to 158 kg (348 lb).\n" +
+                        "\n" +
+                        "Endangered? Near threatened\n" +
+                        "\n";
             case 11:
-                return "Lion";
+                return "Latin: Panthera leo\n" +
+                        "\n" +
+                        "What? The lion is a large cat of the genus Panthera." +
+                        "\n" +
+                        "Where? The lion is native to Africa and India.\n" +
+                        "\n" +
+                        "How big? Head-and-body length 184–208 cm (72–82 in) Tail length 82.5–93.5 cm (32.5–36.8 in) Weight 186.55–225 kg (411.3–496.0 lb) in Southern Africa 174.9 kg (386 lb) in East Africa, 160–190 kg (350–420 lb) in India\n" +
+                        "\n" +
+                        "Endangered? Vulnerable\n" +
+                        "\n";
             case 12:
                 return "Skip your next turn";
             case 13:
-                return "Narwhal";
+                return "Latin: Monodon monoceros\n" +
+                        "\n" +
+                        "What? The narwhal, is a species of toothed whale." +
+                        "\n" +
+                        "Where? It is mostly found in Arctic waters.\n" +
+                        "\n" +
+                        "How big?  An adult narwhal is typically 3.5 to 5.5 m (11 to 18 ft) in length and 800 to 1,600 kg (1,800 to 3,500 lb) in weight.\n" +
+                        "\n" +
+                        "Endangered? No.\n" +
+                        "\n";
             case 14:
-                return "Octopus";
+                return "Latin: Octopus\n" +
+                        "\n" +
+                        "What?" +
+                        "\n" +
+                        "Where?\n" +
+                        "\n" +
+                        "How big?\n" +
+                        "\n" +
+                        "Endangered?\n" +
+                        "\n";
             case 15:
-                return "Penguin";
+                return "Latin:Penguin\n" +
+                        "\n" +
+                        "What?" +
+                        "\n" +
+                        "Where?\n" +
+                        "\n" +
+                        "How big?\n" +
+                        "\n" +
+                        "Endangered?\n" +
+                        "\n";
             case 16:
-                return "Quokka";
+                return "Latin:Quokka\n" +
+                        "\n" +
+                        "What?" +
+                        "\n" +
+                        "Where?\n" +
+                        "\n" +
+                        "How big?\n" +
+                        "\n" +
+                        "Endangered?\n" +
+                        "\n";
             case 17:
-                return "Rabbit";
+                return "Latin:Rabbit\n" +
+                        "\n" +
+                        "What?" +
+                        "\n" +
+                        "Where?\n" +
+                        "\n" +
+                        "How big?\n" +
+                        "\n" +
+                        "Endangered?\n" +
+                        "\n";
             case 18:
-                return "Snake";
+                return "Latin:Snake\n" +
+                        "\n" +
+                        "What?" +
+                        "\n" +
+                        "Where?\n" +
+                        "\n" +
+                        "How big?\n" +
+                        "\n" +
+                        "Endangered?\n" +
+                        "\n";
             case 19:
-                return "Tiger";
+                return "Latin:Tiger\n" +
+                        "\n" +
+                        "What?" +
+                        "\n" +
+                        "Where?\n" +
+                        "\n" +
+                        "How big?\n" +
+                        "\n" +
+                        "Endangered?\n" +
+                        "\n";
             case 20:
                 return "Latin: Crocidura ultima\n" +
                         "\n" +
@@ -177,17 +276,71 @@ public class SpacesInfo {
                         "Endangered? It was previously listed as Critically Endangered, but now Data Deficient.\n" +
                         "\n";
             case 21:
-                return "Vulture";
+                return "Latin:Vulture\n" +
+                        "\n" +
+                        "What?" +
+                        "\n" +
+                        "Where?\n" +
+                        "\n" +
+                        "How big?\n" +
+                        "\n" +
+                        "Endangered?\n" +
+                        "\n";
             case 22:
-                return "Walrus";
+                return "Latin:Walrus\n" +
+                        "\n" +
+                        "What?" +
+                        "\n" +
+                        "Where?\n" +
+                        "\n" +
+                        "How big?\n" +
+                        "\n" +
+                        "Endangered?\n" +
+                        "\n";
             case 23:
-                return "Human";
+                return "Latin:Huamn\n" +
+                        "\n" +
+                        "What?" +
+                        "\n" +
+                        "Where?\n" +
+                        "\n" +
+                        "How big?\n" +
+                        "\n" +
+                        "Endangered?\n" +
+                        "\n";
             case 24:
-                return "Yak";
+                return "Latin:yak\n" +
+                        "\n" +
+                        "What?" +
+                        "\n" +
+                        "Where?\n" +
+                        "\n" +
+                        "How big?\n" +
+                        "\n" +
+                        "Endangered?\n" +
+                        "\n";
             case 25:
-                return "Zebra";
+                return "Latin:Zebra\n" +
+                        "\n" +
+                        "What?" +
+                        "\n" +
+                        "Where?\n" +
+                        "\n" +
+                        "How big?\n" +
+                        "\n" +
+                        "Endangered?\n" +
+                        "\n";
             default:
-                return "Major (fact) ERROR (skill issue)";
+                return "Latin: Majore Errore.\n" +
+                        "\n" +
+                        "What? something went wrong." +
+                        "\n" +
+                        "Where? idk you find out yourself. (Spaces? SpacesInfo? who knows?).\n" +
+                        "\n" +
+                        "How big? BIG ERROR (MAJOR).\n" +
+                        "\n" +
+                        "Endangered? huh.\n" +
+                        "\n";
         }
     }
     public int setBasePrice()

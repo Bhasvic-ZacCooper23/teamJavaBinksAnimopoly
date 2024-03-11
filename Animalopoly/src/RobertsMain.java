@@ -11,7 +11,7 @@ public class RobertsMain extends JFrame{
                     spaces.add(new Spaces(i));
                 }
 
-                //GUI mygui = new GUI(spaces);
+                GUI mygui = new GUI(spaces);
             }
 }
 
