@@ -49,6 +49,10 @@ public class Board {
             if (!player.getSkippedTurn())
             {
                 System.out.println("It's " + player.getName() + "'s turn!" + "\nYou have £"+player.getMoney()+"\n type 'roll' to roll your dice!");
+                if (scanner.nextLine().equals("roll"))
+                {
+
+                }
                 Die dice = new Die();
                 //create and roll the dice
                 int roll1 = dice.roll();
@@ -61,14 +65,40 @@ public class Board {
                     int cardNum = random.nextInt(21);
                     System.out.println(cards.getCard(cardNum));
                     //performs card's action
+                    switch (cardNum)
+                    {
+                        case (0):
+                        {
+                            player.setMoney(player.getMoney()+100);
+                        }
+                        case (1):
+                        {
+                            player.setMoney(player.getMoney()-200);
+                        }
+                        case (2):
+                        {
+                            player.setSkippedTurn(true);
+                        }
+                        default:
+                        {
+
+                        }
+                    }
                 } else {
                     System.out.println("You rolled a " + (roll1 + roll2));
                 }
-                // move player what they rolled spaces
-                player.setPosition(player.getPosition() + roll1 + roll2);
+                // store new variable for future position
+                int position = player.getPosition()+roll1+roll2;
                 // if they go past 26 move them back
-                if (player.getPosition() > 26) {
-                    player.setPosition(player.getPosition() - 26);
+                if (position >= 26) {
+                    player.setPosition(position - 26);
+                    System.out.println("You passed go! Collect 200");
+                    player.setMoney(player.getMoney()+200);
+                }
+                else
+                {
+                    //otherwise move them ahead
+                    player.setPosition(position);
                 }
                 // assign space to the current space's object
                 Spaces space = spaces.get(player.getPosition());
@@ -87,10 +117,46 @@ public class Board {
                             //display the rent of the space
                             System.out.println("This exhibit will cost " + space.getRent() + " to view");
                         } else {
+                            //tell them they don't have enough
                             System.out.println("Sorry you don't have enough money!");
                         }
                     }
+                    //if they own it
+                } else if (space.getOwner()==playerNum)
+                {
+                    //ask if they want to upgrade
+                    System.out.println("You own this space, would you like to upgrade it?\n It costs £"+space.getUpgradePrice()+" to upgrade.");
+                    if (scanner.nextLine().equals("Y"))
+                    {
+                        if (player.getMoney() >= space.getUpgradePrice()) {
+                            //take their money for the purchase
+                            player.setMoney(player.getMoney() - space.getUpgradePrice());
+                            space.setUpgradeLevel(1);
+                            space.setOwner(playerNum);
+                            //display the rent of the space
+                            System.out.println("This exhibit will cost " + space.getRent() + " to view");
+                        } else {
+                            //tell them they don't have enough
+                            System.out.println("Sorry you don't have enough money!");
+                        }
+
+                    }
                 }
+                //if someone else owns it
+                else
+                {
+                    //make them pay rent
+                    System.out.println(players.get(space.getOwner()).getName()+" owns this exhibit, pay £"+space.getRent());
+                    player.setMoney(player.getMoney()-space.getRent());
+                    players.get(space.getOwner()).setMoney(players.get(space.getOwner()).getMoney()+space.getRent());
+                }
+                if(player.getMoney()<0)
+                {
+                    System.out.println(player.getName()+" has gone bankrupt! You lose!");
+                    player.leaveGame();
+                }
+                System.out.println("Press enter to end your go.");
+                scanner.nextLine();
             } else {
                 // if they've been skipped let them know and unskip them
                 System.out.println("Player " + playerNum + ", your turn has been skipped");

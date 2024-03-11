@@ -7,7 +7,11 @@ public class Cards
         String words;
         switch(randy){
             case 0:
-                words = "WAAAAAAAAAAAAAAAAAAAAAA";
+                words = "Discovered new species! Gain £100!";
+            case 1:
+                words = "Snake bite! Lose £200!";
+            case 2:
+                words = "Mauled by a tiger! Skip a turn!";
             default:
                 words = "MAJOR CARD ERRREREOR";
         }
