@@ -11,6 +11,8 @@ public class Board {
     Boolean won = false;
     // initialises the scanner, always useful
     Scanner scanner = new Scanner(System.in);
+    // initialise the ui
+    BoardUi ui = new BoardUi();
 
     public void intitialise()
     {

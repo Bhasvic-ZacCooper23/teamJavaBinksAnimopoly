@@ -5,6 +5,7 @@ public class ZacsMain {
         Board board = new Board();
         //call the board method
         board.intitialise();
+        board.ui.start(board);
         //until someone has won
         while(1==1)
         {
