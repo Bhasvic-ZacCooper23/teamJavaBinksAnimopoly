@@ -3,57 +3,57 @@ public class SpacesInfo {
 
     public String getSpaceName(int num) {
        switch(num){
-           case 1:
+           case 0:
                return "Start";
-           case 2:
+           case 1:
                return "American Alligator";
-           case 3:
+           case 2:
                return "Brown Bear";
-           case 4:
+           case 3:
                return "Capybara";
-           case 5:
+           case 4:
                return "Dog";
-           case 6:
+           case 5:
                return "Elephant";
-           case 7:
+           case 6:
                return "Fox";
-           case 8:
+           case 7:
                return "Giraffe";
-           case 9:
+           case 8:
                return "Horse";
-           case 10:
+           case 9:
                return "Iguana";
-           case 11:
+           case 10:
                return "Jaguar";
-           case 12:
+           case 11:
                return "Lion";
-           case 13:
+           case 12:
                return "Skip turn";
-           case 14:
+           case 13:
                return "Narwhal";
-           case 15:
+           case 14:
                return "Octopus";
-           case 16:
+           case 15:
                return "Penguin";
-           case 17:
+           case 16:
                return "Quokka";
-           case 18:
+           case 17:
                return "Rabbit";
-           case 19:
+           case 18:
                return "Snake";
-           case 20:
+           case 19:
                return "Tiger";
-           case 21:
+           case 20:
                return "ULTIMATE SHREW";
-           case 22:
+           case 21:
                return "Vulture";
-           case 23:
+           case 22:
                return "Walrus";
-           case 24:
+           case 23:
                return "Human";
-           case 25:
+           case 24:
                return "Yak";
-           case 26:
+           case 25:
                return "Zebra";
            default:
                return "Major ERROR (skill issue)";
@@ -62,9 +62,9 @@ public class SpacesInfo {
 
     public String getSpaceFact(int num){
         switch(num){
-            case 1:
+            case 0:
                 return "The start space, if you land on this space, gain £1000.";
-            case 2:
+            case 1:
                 return "Latin: Alligator mississippiensis\n" +
                         "\n" +
                         "What? An American alligator.\n" +
@@ -75,7 +75,7 @@ public class SpacesInfo {
                         "\n" +
                         "Endangered? Not at all.\n" +
                         "\n";
-            case 3:
+            case 2:
                 return "Latin: Ursus arctos\n" +
                         "\n" +
                         "What? A large bear species\n" +
@@ -86,7 +86,7 @@ public class SpacesInfo {
                         "\n" +
                         "Endangered? Not at all.\n" +
                         "\n";
-            case 4:
+            case 3:
                 return "Latin: Hydrochoerus hydrochaeris\n" +
                         "\n" +
                         "What? The largest living rodent in the world.\n" +
@@ -97,7 +97,7 @@ public class SpacesInfo {
                         "\n" +
                         "Endangered? Not at all.\n" +
                         "\n";
-            case 5:
+            case 4:
                 return "Latin: Canis familiaris\n" +
                         "\n" +
                         "What? A domesticated descendant of the wolf. Also called the domestic dog.\n" +
@@ -108,37 +108,37 @@ public class SpacesInfo {
                         "\n" +
                         "Endangered? Not at all.\n" +
                         "\n";
-            case 6:
+            case 5:
                 return "Elephant";
-            case 7:
+            case 6:
                 return "Fox";
-            case 8:
+            case 7:
                 return "Giraffe";
-            case 9:
+            case 8:
                 return "Horse";
-            case 10:
+            case 9:
                 return "Iguana";
-            case 11:
+            case 10:
                 return "Jaguar";
-            case 12:
+            case 11:
                 return "Lion";
-            case 13:
+            case 12:
                 return "Skip your next turn";
-            case 14:
+            case 13:
                 return "Narwhal";
-            case 15:
+            case 14:
                 return "Octopus";
-            case 16:
+            case 15:
                 return "Penguin";
-            case 17:
+            case 16:
                 return "Quokka";
-            case 18:
+            case 17:
                 return "Rabbit";
-            case 19:
+            case 18:
                 return "Snake";
-            case 20:
+            case 19:
                 return "Tiger";
-            case 21:
+            case 20:
                 return "Latin: Crocidura ultima\n" +
                         "\n" +
                         "What? An African shrew with a badass name\n" +
@@ -149,15 +149,15 @@ public class SpacesInfo {
                         "\n" +
                         "Endangered? It was previously listed as Critically Endangered, but now Data Deficient.\n" +
                         "\n";
-            case 22:
+            case 21:
                 return "Vulture";
-            case 23:
+            case 22:
                 return "Walrus";
-            case 24:
+            case 23:
                 return "Human";
-            case 25:
+            case 24:
                 return "Yak";
-            case 26:
+            case 25:
                 return "Zebra";
             default:
                 return "Major (fact) ERROR (skill issue)";
