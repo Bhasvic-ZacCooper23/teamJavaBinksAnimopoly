@@ -21,23 +21,23 @@ public class BoardUi {
             JTextArea obj = propertyList.get(i);
             obj.setBounds(i*100+250, 100, 20, 20);
         }
-        for (int i = 8; i < 15; i++)
+        for (int i = 8; i < 14; i++)
         {
             window.add(propertyList.get(i));
             JTextArea obj = propertyList.get(i);
             obj.setBounds(950, 100+100*(i-8), 20, 20);
         }
-        for (int i = 15; i < 22; i++)
+        for (int i = 14; i < 21; i++)
         {
             window.add(propertyList.get(i));
             JTextArea obj = propertyList.get(i);
-            obj.setBounds(850-(i-15)*100, 700, 20, 20);
+            obj.setBounds(850-(i-14)*100, 700, 20, 20);
         }
-        for (int i = 22; i < 28; i++)
+        for (int i = 21; i < 26; i++)
         {
             window.add(propertyList.get(i));
             JTextArea obj = propertyList.get(i);
-            obj.setBounds(250, 600-100*(i-22), 20, 20);
+            obj.setBounds(250, 600-100*(i-21), 20, 20);
         }
         window.add(DC);
     }
@@ -50,15 +50,15 @@ class boardSquares extends JComponent{
         {
             graph.draw(new Rectangle(i*100+200, 50, 100, 100));
         }
-        for (int i = 0; i < 7; i++)
+        for (int i = 0; i < 6; i++)
         {
             graph.draw(new Rectangle(900, 50+100*i, 100, 100));
         }
         for (int i = 0; i < 7; i++)
         {
-            graph.draw(new Rectangle(i*100+200, 650, 100, 100));
+            graph.draw(new Rectangle(i*100+200, 550, 100, 100));
         }
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < 5; i++)
         {
             graph.draw(new Rectangle(200, 50+100*i, 100, 100));
         }
