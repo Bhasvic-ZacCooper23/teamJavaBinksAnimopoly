@@ -18,8 +18,22 @@ public class Board {
         for (int i = 0; i < 26; i++) {
             spaces.add(new Spaces(i));
         }
+        Boolean valid = false;
         System.out.println("How many players?");
         int lim = Integer.parseInt(scanner.nextLine());
+        if(lim<4 && lim>1)
+        {
+            valid = true;
+        }
+        while(!valid)
+        {
+            System.out.println("How many players?");
+            lim = Integer.parseInt(scanner.nextLine());
+            if(lim<4 && lim>1)
+            {
+                valid = true;
+            }
+        }
 
         // create a player class per player asked for
         for (int i = 0; i < lim; i++) {
@@ -48,11 +62,8 @@ public class Board {
             // check if their turn has been skipped
             if (!player.getSkippedTurn())
             {
-                System.out.println("It's " + player.getName() + "'s turn!" + "\nYou have £"+player.getMoney()+"\n type 'roll' to roll your dice!");
-                if (scanner.nextLine().equals("roll"))
-                {
-
-                }
+                System.out.println("It's " + player.getName() + "'s turn!" + "\nYou have £"+player.getMoney()+"\n press enter to roll your dice!");
+                scanner.nextLine();
                 Die dice = new Die();
                 //create and roll the dice
                 int roll1 = dice.roll();
@@ -90,10 +101,18 @@ public class Board {
                 // store new variable for future position
                 int position = player.getPosition()+roll1+roll2;
                 // if they go past 26 move them back
-                if (position >= 26) {
+                if (position > 26)
+                {
                     player.setPosition(position - 26);
-                    System.out.println("You passed go! Collect 200");
-                    player.setMoney(player.getMoney()+200);
+                    System.out.println("You passed go! Collect 500");
+                    player.setMoney(player.getMoney()+500);
+                }
+                else if(position == 26)
+                {
+                    player.setPosition(position - 26);
+                    System.out.println("You landed on go! Collect 1000");
+                    player.setMoney(player.getMoney()+1000);
+
                 }
                 else
                 {

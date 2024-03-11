@@ -163,7 +163,10 @@ public class SpacesInfo {
                 return "Major (fact) ERROR (skill issue)";
         }
     }
-    public int setBasePrice(){return 1000;}
+    public int setBasePrice()
+    {
+        return 500;
+    }
     public int setUpgradePrice(int num){
         int price;
         switch (num){
