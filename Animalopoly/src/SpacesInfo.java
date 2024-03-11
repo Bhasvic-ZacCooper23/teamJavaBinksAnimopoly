@@ -109,11 +109,38 @@ public class SpacesInfo {
                         "Endangered? Not at all.\n" +
                         "\n";
             case 5:
-                return "Elephant";
+                return "Latin: Elephas maximus\n" +
+                        "\n" +
+                        "What? Elephants are the largest living land animals with hella big noses.\n" +
+                        "\n" +
+                        "Where? Elephants are scattered throughout sub-Saharan Africa, South Asia, and Southeast Asia.\n" +
+                        "\n" +
+                        "How big? Male: 261–289 cm (8 ft 7 in – 9 ft 6 in) (shoulder height), 3.5–4.6 t (3.9–5.1 short tons) (weight); Female: 228–252 cm (7 ft 6 in – 8 ft 3 in) (shoulder height), 2.3–3.1 t (2.5–3.4 short tons) (weight).\n" +
+                        "\n" +
+                        "Endangered? Very, fewer than 52,000 are left in the wild.\n" +
+                        "\n";
             case 6:
-                return "Fox";
+                return "Latin: Vulpes vulpes\n" +
+                        "\n" +
+                        "What? Foxes are small to medium-sized, omnivorous mammals belonging to several genera of the family Canidae.  The most common and widespread species of fox is the red fox (Vulpes vulpes) with about 47 recognized subspecies.\n" +
+                        "\n" +
+                        "Where? Foxes live on every continent except Antarctica.\n" +
+                        "\n" +
+                        "How big? males weigh on average between 4.1 and 8.7 kilograms (9 and 19+1⁄4 pounds),[7] while the smallest species, the fennec fox, weighs just 0.7 to 1.6 kg (1+1⁄2 to 3+1⁄2 lb).\n" +
+                        "\n" +
+                        "Endangered? Not at all.\n" +
+                        "\n";
             case 7:
-                return "Giraffe";
+                return "Latin: Giraffa camelopardalis\n" +
+                        "\n" +
+                        "What? The giraffe is a large African hoofed mammal belonging to the genus Giraffa." +
+                        "\n" +
+                        "Where? Foxes live on every continent except Antarctica.\n" +
+                        "\n" +
+                        "How big? males weigh on average between 4.1 and 8.7 kilograms (9 and 19+1⁄4 pounds),[7] while the smallest species, the fennec fox, weighs just 0.7 to 1.6 kg (1+1⁄2 to 3+1⁄2 lb).\n" +
+                        "\n" +
+                        "Endangered? Not at all.\n" +
+                        "\n";
             case 8:
                 return "Horse";
             case 9:
