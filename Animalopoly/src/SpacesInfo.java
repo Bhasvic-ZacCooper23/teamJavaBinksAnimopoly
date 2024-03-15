@@ -1,7 +1,8 @@
 public class SpacesInfo {
 
-
+    // this (class?) is kinda like a warehouse that stores all the information about the spaces in one place, because I didn't want it in the space class.
     public String getSpaceName(int num) {
+        // All names of the spaces. default being an error message.
        switch(num){
            case 0:
                return "Start";
@@ -61,6 +62,7 @@ public class SpacesInfo {
     }
 
     public String getSpaceFact(int num){
+        // All the fun facts about the spaces. (just copied and pasted from wikipedia). default being an error message.
         switch(num){
             case 0:
                 return "The start space, if you land on this space, gain £1000.";
@@ -343,10 +345,13 @@ public class SpacesInfo {
                         "\n";
         }
     }
+    // Returns the initial price needed to buy a space. (Separate from the Spaces class for ease of editing I guess).
     public int setBasePrice()
     {
         return 500;
     }
+
+    // Returns the new price needed to upgrade the space (pretty much all placeholder numbers)
     public int setUpgradePrice(int num){
         int price;
         switch (num){
@@ -368,6 +373,8 @@ public class SpacesInfo {
         }
         return price;
     }
+
+    // returns the rent the space now has via level
     public int getRent(int level){
         int rent;
         switch(level){

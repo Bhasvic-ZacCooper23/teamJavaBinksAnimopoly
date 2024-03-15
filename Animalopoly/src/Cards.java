@@ -4,6 +4,7 @@ public class Cards
 {
     public String getCard(int randy)
     {
+        // big switch case of all the cards, actual effect will be hard coded into the (board?) default is an error message.
         String words;
         switch(randy){
             case 0:
