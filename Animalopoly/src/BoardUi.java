@@ -2,12 +2,15 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 public class BoardUi {
+    JTextArea dialogueBox = new JTextArea("");
+    JButton button1 = new JButton("");
+    JButton button2 = new JButton("");
     public void start(Board board)
     {
         ArrayList<JTextArea> propertyList = new ArrayList<JTextArea>();
-        for (int i = 0; i < 28; i++)
+        for (int i = 0; i < 26; i++)
         {
-            propertyList.add(new JTextArea(Integer.toString(i)));
+            propertyList.add(new JTextArea(board.spaces.get(i).getName()));
         }
         JFrame window = new JFrame();
         window.setTitle("Animopoly");
@@ -19,26 +22,32 @@ public class BoardUi {
         {
             window.add(propertyList.get(i));
             JTextArea obj = propertyList.get(i);
-            obj.setBounds(i*100+250, 100, 20, 20);
+            obj.setBounds(i*100+201, 51, 98, 20);
         }
         for (int i = 8; i < 14; i++)
         {
             window.add(propertyList.get(i));
             JTextArea obj = propertyList.get(i);
-            obj.setBounds(950, 100+100*(i-8), 20, 20);
+            obj.setBounds(901, 51+100*(i-8), 98, 20);
         }
         for (int i = 14; i < 21; i++)
         {
             window.add(propertyList.get(i));
             JTextArea obj = propertyList.get(i);
-            obj.setBounds(850-(i-14)*100, 700, 20, 20);
+            obj.setBounds(801-(i-14)*100, 551, 98, 20);
         }
         for (int i = 21; i < 26; i++)
         {
             window.add(propertyList.get(i));
             JTextArea obj = propertyList.get(i);
-            obj.setBounds(250, 600-100*(i-21), 20, 20);
+            obj.setBounds(201, 551-100*(i-21), 98, 20);
         }
+        window.add(dialogueBox);
+        dialogueBox.setBounds(1100,0,800,450);
+        window.add(button1);
+        window.add(button2);
+        button1.setBounds(1100,500,500,200);
+        button2.setBounds(1100,700,500,200);
         window.add(DC);
     }
 }

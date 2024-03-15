@@ -1,6 +1,8 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
-import java.util.Scanner;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Board {
     // initialise all object arrays
@@ -53,9 +55,9 @@ public class Board {
         }
         System.out.println("Done initialising, lets play!");
     }
-
-    public void doATurn(int playerNum)
-    {
+    public Boolean go;
+    public int choice;
+    public void doATurn(int playerNum) throws InterruptedException {
         // assign player to the current player's object
         Players player = players.get(playerNum);
         // check they haven't lost
@@ -65,7 +67,22 @@ public class Board {
             if (!player.getSkippedTurn())
             {
                 System.out.println("It's " + player.getName() + "'s turn!" + "\nYou have £"+player.getMoney()+"\n press enter to roll your dice!");
-                scanner.nextLine();
+                ui.dialogueBox.setText("It's " + player.getName() + "'s turn!" + "\nYou have £"+player.getMoney()+"\n click the button to roll your dice!");
+                ui.button1.setText("roll");
+                go = false;
+                ui.button1.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e)
+                    {
+                        go = true;
+                    }
+
+                });
+                while (!go)
+                {
+                    System.out.println("");
+                }
+                ui.button1.setText("");
                 Die dice = new Die();
                 //create and roll the dice
                 int roll1 = dice.roll();
@@ -73,10 +90,12 @@ public class Board {
                 // check for a double
                 if (roll1 == roll2) {
                     System.out.println("You rolled a " + (roll1 + roll2) + "!\nand it was a double!");
+                    ui.dialogueBox.setText("You rolled a " + (roll1 + roll2) + "!\nand it was a double!");
                     // get a card
                     Random random = new Random();
                     int cardNum = random.nextInt(21);
                     System.out.println(cards.getCard(cardNum));
+                    ui.dialogueBox.setText(cards.getCard(cardNum));
                     //performs card's action
                     switch (cardNum)
                     {
@@ -99,6 +118,7 @@ public class Board {
                     }
                 } else {
                     System.out.println("You rolled a " + (roll1 + roll2));
+                    ui.dialogueBox.setText("You rolled a " + (roll1 + roll2));
                 }
                 // store new variable for future position
                 int position = player.getPosition()+roll1+roll2;
@@ -107,12 +127,14 @@ public class Board {
                 {
                     player.setPosition(position - 26);
                     System.out.println("You passed go! Collect 500");
+                    ui.dialogueBox.setText("You passed go! Collect 500");
                     player.setMoney(player.getMoney()+500);
                 }
                 else if(position == 26)
                 {
                     player.setPosition(position - 26);
                     System.out.println("You landed on go! Collect 1000");
+                    ui.dialogueBox.setText("You landed on go! Collect 1000");
                     player.setMoney(player.getMoney()+1000);
 
                 }
@@ -125,11 +147,29 @@ public class Board {
                 Spaces space = spaces.get(player.getPosition());
                 // print out that spaces name and information
                 System.out.println(space.getName() + "\n" + space.getInfo());
+                ui.dialogueBox.setText(space.getName() + "\n" + space.getInfo());
                 // check if that space has been bought
                 if (space.getUpgradeLevel() == 0) {
                     System.out.println("This space has not been bought. It costs: " + space.getUpgradePrice() + " \n Would you like to buy it?(Y/N)");
+                    ui.dialogueBox.setText("This space has not been bought. It costs: " + space.getUpgradePrice() + " \n Would you like to buy it?");
                     //if they want to buy it
-                    if (scanner.nextLine().equals("Y")) {
+                    go = false;
+                    choice = 0;
+                    ui.button1.setText("Yes");
+                    ui.button2.setText("No");
+                    ui.button2.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            choice = 1;
+                        }
+                    });
+                    while(!go && choice == 0)
+                    {
+                        System.out.println("");
+                    }
+                    ui.button1.setText("End Go?");
+                    ui.button2.setText("");
+                    if (choice == 0) {
                         if (player.getMoney() >= space.getUpgradePrice()) {
                             //take their money for the purchase
                             player.setMoney(player.getMoney() - space.getUpgradePrice());
@@ -137,9 +177,11 @@ public class Board {
                             space.setOwner(playerNum);
                             //display the rent of the space
                             System.out.println("This exhibit will cost " + space.getRent() + " to view");
+                            ui.dialogueBox.setText("This exhibit will cost " + space.getRent() + " to view");
                         } else {
                             //tell them they don't have enough
                             System.out.println("Sorry you don't have enough money!");
+                            ui.dialogueBox.setText("Sorry you don't have enough money!");
                         }
                     }
                     //if they own it
@@ -147,6 +189,7 @@ public class Board {
                 {
                     //ask if they want to upgrade
                     System.out.println("You own this space, would you like to upgrade it?\n It costs £"+space.getUpgradePrice()+" to upgrade.");
+                    ui.dialogueBox.setText("You own this space, would you like to upgrade it?\n It costs £"+space.getUpgradePrice()+" to upgrade.");
                     if (scanner.nextLine().equals("Y"))
                     {
                         if (player.getMoney() >= space.getUpgradePrice()) {
@@ -156,9 +199,11 @@ public class Board {
                             space.setOwner(playerNum);
                             //display the rent of the space
                             System.out.println("This exhibit will cost " + space.getRent() + " to view");
+                            ui.dialogueBox.setText("This exhibit will cost " + space.getRent() + " to view");
                         } else {
                             //tell them they don't have enough
                             System.out.println("Sorry you don't have enough money!");
+                            ui.dialogueBox.setText("Sorry you don't have enough money!");
                         }
 
                     }
@@ -168,20 +213,30 @@ public class Board {
                 {
                     //make them pay rent
                     System.out.println(players.get(space.getOwner()).getName()+" owns this exhibit, pay £"+space.getRent());
+                    ui.dialogueBox.setText(players.get(space.getOwner()).getName()+" owns this exhibit, pay £"+space.getRent());
                     player.setMoney(player.getMoney()-space.getRent());
                     players.get(space.getOwner()).setMoney(players.get(space.getOwner()).getMoney()+space.getRent());
                 }
                 if(player.getMoney()<0)
                 {
                     System.out.println(player.getName()+" has gone bankrupt! You lose!");
+                    ui.dialogueBox.setText(player.getName()+" has gone bankrupt! You lose!");
                     player.leaveGame();
                 }
-                System.out.println("Press enter to end your go.");
-                scanner.nextLine();
-            } else {
+
+            } else
+            {
                 // if they've been skipped let them know and unskip them
                 System.out.println("Player " + playerNum + ", your turn has been skipped");
+                ui.dialogueBox.setText("Player " + playerNum + ", your turn has been skipped");
                 player.setSkippedTurn(false);
+            }
+            go = false;
+            System.out.println("Press enter to end your go.");
+            ui.dialogueBox.setText("Press button to end your go.");
+            while (!go)
+            {
+                System.out.println("");
             }
         }
     }

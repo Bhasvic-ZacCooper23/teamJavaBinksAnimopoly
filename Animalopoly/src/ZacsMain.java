@@ -1,11 +1,11 @@
 public class ZacsMain {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) throws InterruptedException {
         //create the board
         Board board = new Board();
         //call the board method
         board.intitialise();
         board.ui.start(board);
+        board.ui.dialogueBox.setText("Hello");
         //until someone has won
         while(1==1)
         {
