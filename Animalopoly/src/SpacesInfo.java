@@ -28,9 +28,9 @@ public class SpacesInfo {
            case 11:
                return "Lion";
            case 12:
-               return "Skip turn";
-           case 13:
                return "Narwhal";
+           case 13:
+               return "Skip turn";
            case 14:
                return "Octopus";
            case 15:
@@ -186,8 +186,6 @@ public class SpacesInfo {
                         "Endangered? Vulnerable\n" +
                         "\n";
             case 12:
-                return "Skip your next turn";
-            case 13:
                 return "Latin: Monodon monoceros\n" +
                         "\n" +
                         "What? The narwhal, is a species of toothed whale.\n" +
@@ -198,6 +196,8 @@ public class SpacesInfo {
                         "\n" +
                         "Endangered? No.\n" +
                         "\n";
+            case 13:
+                return "Skip your next turn.";
             case 14:
                 return "Latin: Enteroctopus dofleini\n" +
                         "\n" +
