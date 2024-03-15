@@ -1,7 +1,8 @@
 public class SpacesInfo {
 
-
+    // this (class?) is kinda like a warehouse that stores all the information about the spaces in one place, because I didn't want it in the space class.
     public String getSpaceName(int num) {
+        // All names of the spaces. default being an error message.
        switch(num){
            case 0:
                return "Start";
@@ -28,9 +29,9 @@ public class SpacesInfo {
            case 11:
                return "Lion";
            case 12:
-               return "Skip turn";
-           case 13:
                return "Narwhal";
+           case 13:
+               return "Skip turn";
            case 14:
                return "Octopus";
            case 15:
@@ -61,6 +62,7 @@ public class SpacesInfo {
     }
 
     public String getSpaceFact(int num){
+        // All the fun facts about the spaces. (just copied and pasted from wikipedia). default being an error message.
         switch(num){
             case 0:
                 return "The start space, if you land on this space, gain £1000.";
@@ -133,7 +135,7 @@ public class SpacesInfo {
             case 7:
                 return "Latin: Giraffa camelopardalis\n" +
                         "\n" +
-                        "What? The giraffe is a large (very tall) African hoofed mammal belonging to the genus Giraffa." +
+                        "What? The giraffe is a large (very tall) African hoofed mammal belonging to the genus Giraffa.\n" +
                         "\n" +
                         "Where? Its scattered range extends from Chad in the north to South Africa in the south, and from Niger in the west to Somalia in the east.\n" +
                         "\n" +
@@ -144,7 +146,7 @@ public class SpacesInfo {
             case 8:
                 return "Latin: Equus caballus\n" +
                         "\n" +
-                        "What? The horse is a domesticated, one-toed, hoofed mammal." +
+                        "What? The horse is a domesticated, one-toed, hoofed mammal.\n" +
                         "\n" +
                         "Where? EVERYWHERE.\n" +
                         "\n" +
@@ -155,7 +157,7 @@ public class SpacesInfo {
             case 9:
                 return "Latin: Iguana iguana\n" +
                         "\n" +
-                        "What? Iguana is a genus of herbivorous lizards." +
+                        "What? Iguana is a genus of herbivorous lizards.\n" +
                         "\n" +
                         "Where? Iguanas are native to tropical areas of Mexico, Central America, South America, and the Caribbean.\n" +
                         "\n" +
@@ -166,7 +168,7 @@ public class SpacesInfo {
             case 10:
                 return "Latin: Panthera onca\n" +
                         "\n" +
-                        "What? The jaguar is a large cat species of the genus Panthera." +
+                        "What? The jaguar is a large cat species of the genus Panthera.\n" +
                         "\n" +
                         "Where? The jaguar is native to the Americas.\n" +
                         "\n" +
@@ -177,7 +179,7 @@ public class SpacesInfo {
             case 11:
                 return "Latin: Panthera leo\n" +
                         "\n" +
-                        "What? The lion is a large cat of the genus Panthera." +
+                        "What? The lion is a large cat of the genus Panthera.\n" +
                         "\n" +
                         "Where? The lion is native to Africa and India.\n" +
                         "\n" +
@@ -186,11 +188,9 @@ public class SpacesInfo {
                         "Endangered? Vulnerable\n" +
                         "\n";
             case 12:
-                return "Skip your next turn";
-            case 13:
                 return "Latin: Monodon monoceros\n" +
                         "\n" +
-                        "What? The narwhal, is a species of toothed whale." +
+                        "What? The narwhal, is a species of toothed whale.\n" +
                         "\n" +
                         "Where? It is mostly found in Arctic waters.\n" +
                         "\n" +
@@ -198,71 +198,73 @@ public class SpacesInfo {
                         "\n" +
                         "Endangered? No.\n" +
                         "\n";
+            case 13:
+                return "Skip your next turn.";
             case 14:
-                return "Latin: Octopus\n" +
+                return "Latin: Enteroctopus dofleini\n" +
                         "\n" +
-                        "What?" +
+                        "What? An octopus is a soft-bodied, eight-limbed mollusc.\n" +
                         "\n" +
-                        "Where?\n" +
+                        "Where? Octopuses inhabit various regions of the ocean, including coral reefs, pelagic waters, and the seabed; some live in the intertidal zone and others at abyssal depths.\n" +
                         "\n" +
-                        "How big?\n" +
+                        "How big? Adults usually weigh around 15 kg (33 lb), with an arm span of up to 4.3 m (14 ft).[19] The largest specimen of this species to be scientifically documented was an animal with a live mass of 71 kg (157 lb).\n" +
                         "\n" +
-                        "Endangered?\n" +
+                        "Endangered? No.\n" +
                         "\n";
             case 15:
-                return "Latin:Penguin\n" +
+                return "Latin: Aptenodytes forsteri\n" +
                         "\n" +
-                        "What?" +
+                        "What? Penguins are a group of aquatic flightless birds.\n" +
                         "\n" +
-                        "Where?\n" +
+                        "Where?  They live almost exclusively in the Southern Hemisphere: only one species, the Galápagos penguin, is found north of the Equator.\n" +
                         "\n" +
-                        "How big?\n" +
+                        "How big? on average, adults are about 1.1 m (3 ft 7 in) tall and weigh 35 kg (77 lb).\n" +
                         "\n" +
-                        "Endangered?\n" +
+                        "Endangered? Near threatened\n" +
                         "\n";
             case 16:
-                return "Latin:Quokka\n" +
+                return "Latin: Setonix brachyurus\n" +
                         "\n" +
-                        "What?" +
+                        "What? The quokka is a small macropod about the size of a domestic cat.\n" +
                         "\n" +
-                        "Where?\n" +
+                        "Where? The quokka's range is a small area of southwestern Australia. They inhabit some smaller islands off the coast of Western Australia.\n" +
                         "\n" +
-                        "How big?\n" +
+                        "How big? A quokka weighs 2.5 to 5.0 kg (5.5 to 11 lb) and is 40 to 54 cm (16 to 21 in) long with a 25-to-30 cm-long (9.8-to-12 in) tail.\n" +
                         "\n" +
-                        "Endangered?\n" +
+                        "Endangered? Vulnerable.\n" +
                         "\n";
             case 17:
-                return "Latin:Rabbit\n" +
+                return "Latin: Oryctolagus cuniculus\n" +
                         "\n" +
-                        "What?" +
+                        "What? Rabbits, also known as bunnies or bunny rabbits, are small mammals in the family Leporidae.\n" +
                         "\n" +
-                        "Where?\n" +
+                        "Where? Rabbit habitats include meadows, woods, forests, grasslands, deserts and wetlands. The best known species, the European rabbit, lives in burrows, or rabbit holes. A group of burrows is called a warren.\n" +
                         "\n" +
-                        "How big?\n" +
+                        "How big? An adult European rabbit can measure 40 cm (16 in) in length, and weigh 1,200–2,000 g (2.6–4.4 lb). The hind foot measures 8.5–10 cm (3.3–3.9 in) in length, while the ears are 6.5–7.5 cm (2.6–3.0 in).\n" +
                         "\n" +
-                        "Endangered?\n" +
+                        "Endangered? Near Threatened.\n" +
                         "\n";
             case 18:
-                return "Latin:Snake\n" +
+                return "Latin: Boa constrictor\n" +
                         "\n" +
-                        "What?" +
+                        "What? Snakes are elongated, limbless, carnivorous reptiles of the suborder Serpentes.\n" +
                         "\n" +
-                        "Where?\n" +
+                        "Where? The Boa constrictor is native to tropical South America.\n" +
                         "\n" +
-                        "How big?\n" +
+                        "How big? Clear sexual dimorphism is seen in the species, with females generally being larger in both length and girth than males. The usual size of mature female boas is between 7 and 10 ft (2.1 and 3.0 m) whereas males are between 6 and 8 ft (1.8 and 2.4 m).\n" +
                         "\n" +
-                        "Endangered?\n" +
+                        "Endangered? No.\n" +
                         "\n";
             case 19:
-                return "Latin:Tiger\n" +
+                return "Latin: Panthera tigris\n" +
                         "\n" +
-                        "What?" +
+                        "What? The tiger is the largest living cat species and a member of the genus Panthera.\n" +
                         "\n" +
-                        "Where?\n" +
+                        "Where? What remains of the range where tigers still roam free is fragmented, stretching in spots from Siberian temperate forests to subtropical and tropical forests on the Indian subcontinent, Indochina and a single Indonesian island, Sumatra.\n" +
                         "\n" +
-                        "How big?\n" +
+                        "How big? Tigers average a total length of 3 m (9.8 ft), with males weighing 200–260 kg (440–570 lb) and females weighing 100–160 kg (220–350 lb).\n" +
                         "\n" +
-                        "Endangered?\n" +
+                        "Endangered? Endangered.\n" +
                         "\n";
             case 20:
                 return "Latin: Crocidura ultima\n" +
@@ -276,77 +278,80 @@ public class SpacesInfo {
                         "Endangered? It was previously listed as Critically Endangered, but now Data Deficient.\n" +
                         "\n";
             case 21:
-                return "Latin:Vulture\n" +
+                return "Latin: Coragyps atratus\n" +
                         "\n" +
-                        "What?" +
+                        "What? The black vulture, also known as the American black vulture, is a bird of prey that scavenges on carrion.\n" +
                         "\n" +
-                        "Where?\n" +
+                        "Where? Its range extends from the southeastern United States to Perú, Central Chile and Uruguay in South America.\n" +
                         "\n" +
-                        "How big?\n" +
+                        "How big? Measuring 56–74 cm (22–29 in) in length, with a 1.33–1.67 m (52–66 in) wingspan. Weight ranges from 1.6 to 3 kg (3.5 to 6.6 lb)\n" +
                         "\n" +
-                        "Endangered?\n" +
+                        "Endangered? Population declining\n" +
                         "\n";
             case 22:
-                return "Latin:Walrus\n" +
+                return "Latin: Odobenus rosmarus\n" +
                         "\n" +
-                        "What?" +
+                        "What? The walrus is a large pinniped marine mammal" +
                         "\n" +
-                        "Where?\n" +
+                        "Where? discontinuous distribution about the North Pole in the Arctic Ocean and subarctic seas of the Northern Hemisphere.\n" +
                         "\n" +
-                        "How big?\n" +
+                        "How big? While some outsized Pacific males can weigh as much as 2,000 kg (4,400 lb), most weigh between 800 and 1,700 kg (1,800 and 3,700 lb).  Length typically ranges from 2.2 to 3.6 m (7 ft 3 in to 11 ft 10 in).\n" +
                         "\n" +
-                        "Endangered?\n" +
+                        "Endangered? Data deficient.\n" +
                         "\n";
             case 23:
-                return "Latin:Huamn\n" +
+                return "Latin: Homo sapiens\n" +
                         "\n" +
-                        "What?" +
+                        "What? Humans or modern humans are the most common and widespread species of primate, and the last surviving species of the genus Homo.\n" +
                         "\n" +
-                        "Where?\n" +
+                        "Where? EVERYWHERE.\n" +
                         "\n" +
-                        "How big?\n" +
+                        "How big? It is estimated that the worldwide average height for an adult human male is about 171 cm (5 ft 7 in), while the worldwide average height for adult human females is about 159 cm (5 ft 3 in). The average mass of an adult human is 59 kg (130 lb) for females and 77 kg (170 lb) for males.\n" +
                         "\n" +
-                        "Endangered?\n" +
+                        "Endangered? The complete opposite, there are too many.\n" +
                         "\n";
             case 24:
-                return "Latin:yak\n" +
+                return "Latin: Bos grunniens\n" +
                         "\n" +
-                        "What?" +
+                        "What? The yak is a species of long-haired domesticated cattle.\n" +
                         "\n" +
-                        "Where?\n" +
+                        "Where? Found throughout the Himalayan region of South Asia, the Tibetan Plateau, Gilgit-Baltistan (Kashmir), Tajikistan and as far north as Mongolia and Siberia.\n" +
                         "\n" +
-                        "How big?\n" +
+                        "How big? Males weigh 350 to 585 kg (772 to 1,290 lb), females weigh 225 to 255 kg (496 to 562 lb). males are 111–138 centimetres (44–54 in) high at the withers, while females are 105–117 centimetres (41–46 in) high at the withers.\n" +
                         "\n" +
-                        "Endangered?\n" +
+                        "Endangered? Vulnerable\n" +
                         "\n";
             case 25:
-                return "Latin:Zebra\n" +
+                return "Latin: Equus grevyi\n" +
                         "\n" +
-                        "What?" +
+                        "What? Zebras are African equines with distinctive black-and-white striped coats.\n" +
                         "\n" +
-                        "Where?\n" +
+                        "Where? Eastern Africa including the Horn;[24] arid and semiarid grasslands and shrublands.\n" +
                         "\n" +
-                        "How big?\n" +
+                        "How big? Body length of 250–300 cm (98–118 in) with 38–75 cm (15–30 in) tail, 125–160 cm (4.10–5.25 ft) shoulder height and weighs 352–450 kg (776–992 lb).\n" +
                         "\n" +
-                        "Endangered?\n" +
+                        "Endangered? Threatened by habitat loss\n" +
                         "\n";
             default:
                 return "Latin: Majore Errore.\n" +
                         "\n" +
-                        "What? something went wrong." +
+                        "What? something went wrong.\n" +
                         "\n" +
                         "Where? idk you find out yourself. (Spaces? SpacesInfo? who knows?).\n" +
                         "\n" +
                         "How big? BIG ERROR (MAJOR).\n" +
                         "\n" +
-                        "Endangered? huh.\n" +
+                        "Endangered? huh?\n" +
                         "\n";
         }
     }
+    // Returns the initial price needed to buy a space. (Separate from the Spaces class for ease of editing I guess).
     public int setBasePrice()
     {
         return 500;
     }
+
+    // Returns the new price needed to upgrade the space (pretty much all placeholder numbers)
     public int setUpgradePrice(int num){
         int price;
         switch (num){
@@ -368,6 +373,8 @@ public class SpacesInfo {
         }
         return price;
     }
+
+    // returns the rent the space now has via level
     public int getRent(int level){
         int rent;
         switch(level){
