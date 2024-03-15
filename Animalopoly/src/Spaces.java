@@ -48,21 +48,5 @@ public class Spaces {
 
     public int getOwner(){return owner;}
 
-    //placeholder for rent code, please do rent ASAP Robert
-
-    public int getRent(){
-        int rent;
-
-        switch(upgradeLevel){
-            case 1:
-                rent = 50;
-            case 2:
-                rent = 100;
-            case 3:
-                rent = 200;
-            default:
-                rent = 999;
-        }
-        return rent;
-    }
+    public int getRent(){return namer.getRent(upgradeLevel);}
 }

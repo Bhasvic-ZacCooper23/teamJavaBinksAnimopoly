@@ -40,7 +40,7 @@ public class Cards
                 words  = "Gain £100 through suspicious means";
                 break;
             case 11:
-                words = "Committed tax evasion, gain £300";
+                words = "Some cats helped you commit tax evasion, gain £300";
                 break;
             default:
                 words = "MAJOR CARD ERRREREOR";

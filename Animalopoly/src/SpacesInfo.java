@@ -368,4 +368,25 @@ public class SpacesInfo {
         }
         return price;
     }
+    public int getRent(int level){
+        int rent;
+        switch(level){
+            case 0:
+                rent = 0;
+                break;
+            case 1:
+                rent = 50;
+                break;
+            case 2:
+                rent = 100;
+                break;
+            case 3:
+                rent = 200;
+                break;
+            default:
+                rent = 999;
+                break;
+        }
+        return rent;
+    }
 }
