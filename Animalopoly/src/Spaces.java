@@ -17,10 +17,9 @@ public class Spaces {
     }
     public void printName() {System.out.println(name);}
     public String getName(){return name;}
-    public void printFact() {
+    public void printInfo() {
         System.out.println(fact);
     }
-
     public String getInfo(){
         return fact;
     }
