@@ -16,12 +16,19 @@ public class Spaces {
     // Makes a SpacesInfo object to pull all info needed from
     SpacesInfo namer = new SpacesInfo();
 
-    // Constructor. Space number is passed through. Name, Fact and base upgrade price are all pulled from the SpacesInfo.
+    // Constructor. Space number is passed through. Name, Fact and base upgrade price are all pulled from SpacesInfo.
     public Spaces(int num)  {
         this.num = num;
         name = namer.getSpaceName(this.num);
         info = namer.getSpaceFact(this.num);
-        upgradePrice = namer.setBasePrice();
+        if(this.num == 0 || this.num == 13){
+            upgradePrice = 999999999;
+            upgradeLevel = 999999999;
+            // probably should change this, but it means they can't buy the start and skip a turn spaces.
+        }
+        else {
+            upgradePrice = namer.setBasePrice();
+        }
     }
     // Prints the name. (probably not needed).
     public void printName() {System.out.println(name);}
