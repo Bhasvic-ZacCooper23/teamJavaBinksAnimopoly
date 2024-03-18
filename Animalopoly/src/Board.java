@@ -34,7 +34,7 @@ public class Board {
         {
             System.out.println("How many players?");
             lim = Integer.parseInt(scanner.nextLine());
-            if(lim<4 && lim>1)
+            if(lim<5 && lim>1)
             {
                 valid = true;
             }
@@ -131,6 +131,22 @@ public class Board {
                             player.setMoney(player.getMoney()+100);
                         case 11:
                             player.setMoney(player.getMoney()+300);
+                        case 12:
+
+                        case 13:
+                            player.setMoney(player.getMoney()+600);
+                        case 14:
+                            player.setMoney(player.getMoney()-700);
+                        case 15:
+                            player.setMoney(player.getMoney()-100);
+                        case 16:
+                            player.setMoney(player.getMoney()-500);
+                        case 17:
+                            player.setMoney(0);
+                        case 18:
+                            player.setMoney(player.getMoney()+3000);
+                        case 19:
+                            player.setMoney(player.getMoney()+50);
                         default:
                     }
                 } else {
@@ -195,6 +211,7 @@ public class Board {
                             space.setOwner(playerNum);
                             ui.ownerBoxes.get(player.getPosition()).setText("Owned by: "+player.getName());
                             ui.ownerBoxes.get(player.getPosition()).setBackground(player.getColour());
+                            ui.levelDisplays.get(player.getPosition()).setText("Level: "+space.getUpgradeLevel());
                             //display the rent of the space
                             System.out.println("This exhibit will cost " + space.getRent() + " to view");
                             ui.dialogueBox.setText(ui.dialogueBox.getText()+"\nThis exhibit will cost " + space.getRent() + " to view");
@@ -223,8 +240,8 @@ public class Board {
                         if (player.getMoney() >= space.getUpgradePrice()) {
                             //take their money for the purchase
                             player.setMoney(player.getMoney() - space.getUpgradePrice());
-                            space.setUpgradeLevel(1);
-                            space.setOwner(playerNum);
+                            space.setUpgradeLevel(space.getUpgradeLevel()+1);
+                            ui.levelDisplays.get(player.getPosition()).setText("Level: "+space.getUpgradeLevel());
                             //display the rent of the space
                             System.out.println("This exhibit will cost " + space.getRent() + " to view");
                             ui.dialogueBox.setText(ui.dialogueBox.getText()+"\nThis exhibit will cost " + space.getRent() + " to view");

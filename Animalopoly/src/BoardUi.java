@@ -8,6 +8,8 @@ public class BoardUi {
     ArrayList<JTextArea> propertyList = new ArrayList<JTextArea>();
     ArrayList<JTextArea> playersAtSquare = new ArrayList<JTextArea>();
     ArrayList<JTextArea> ownerBoxes = new ArrayList<JTextArea>();
+    ArrayList<JTextArea> levelDisplays = new ArrayList<JTextArea>();
+    ArrayList<JTextArea> rentLabel = new ArrayList<JTextArea>();
     public void start(Board board)
     {
         for (int i = 0; i < 26; i++)
@@ -22,6 +24,14 @@ public class BoardUi {
         {
             ownerBoxes.add(new JTextArea("Unowned"));
         }
+        for (int i = 0; i < 26; i++)
+        {
+            levelDisplays.add(new JTextArea("Level: 0"));
+        }
+        for (int i = 0; i < 26; i++)
+        {
+            rentLabel.add(new JTextArea());
+        }
         JFrame window = new JFrame();
         window.setTitle("Animopoly");
         window.setSize(2000, 1000);
@@ -32,49 +42,73 @@ public class BoardUi {
         {
             window.add(propertyList.get(i));
             JTextArea obj = propertyList.get(i);
-            obj.setBounds(i*100+201, 51, 98, 20);
+            obj.setBounds(i*100+201, 51, 98, 15);
             window.add(playersAtSquare.get(i));
             JTextArea obj2 = playersAtSquare.get(i);
-            obj2.setBounds(i*100+201, 72, 98, 20);
+            obj2.setBounds(i*100+201, 72, 98, 15);
             window.add(ownerBoxes.get(i));
             JTextArea obj3 = ownerBoxes.get(i);
-            obj3.setBounds(i*100+201, 93, 98, 20);
+            obj3.setBounds(i*100+201, 93, 98, 15);
+            window.add(levelDisplays.get(i));
+            JTextArea obj4 = levelDisplays.get(i);
+            obj4.setBounds(i*100+201, 114, 98, 15);
+            window.add(rentLabel.get(i));
+            JTextArea obj5 = rentLabel.get(i);
+            obj5.setBounds(i*100+201, 135, 98, 15);
         }
         for (int i = 8; i < 14; i++)
         {
             window.add(propertyList.get(i));
             JTextArea obj = propertyList.get(i);
-            obj.setBounds(901, 51+100*(i-8), 98, 20);
+            obj.setBounds(901, 51+100*(i-8), 98, 15);
             window.add(playersAtSquare.get(i));
             JTextArea obj2 = playersAtSquare.get(i);
-            obj2.setBounds(901, 72+100*(i-8), 98, 20);
+            obj2.setBounds(901, 72+100*(i-8), 98, 15);
             window.add(ownerBoxes.get(i));
             JTextArea obj3 = ownerBoxes.get(i);
-            obj3.setBounds(901, 93+100*(i-8), 98, 20);
+            obj3.setBounds(901, 93+100*(i-8), 98, 15);
+            window.add(levelDisplays.get(i));
+            JTextArea obj4 = levelDisplays.get(i);
+            obj4.setBounds(901, 114+100*(i-8), 98, 15);
+            window.add(rentLabel.get(i));
+            JTextArea obj5 = rentLabel.get(i);
+            obj5.setBounds(901, 135+100*(i-8), 98, 15);
         }
         for (int i = 14; i < 21; i++)
         {
             window.add(propertyList.get(i));
             JTextArea obj = propertyList.get(i);
-            obj.setBounds(801-(i-14)*100, 551, 98, 20);
+            obj.setBounds(801-(i-14)*100, 546, 98, 15);
             window.add(playersAtSquare.get(i));
             JTextArea obj2 = playersAtSquare.get(i);
-            obj2.setBounds(801-(i-14)*100, 572, 98, 20);
+            obj2.setBounds(801-(i-14)*100, 567, 98, 15);
             window.add(ownerBoxes.get(i));
             JTextArea obj3 = ownerBoxes.get(i);
-            obj3.setBounds(801-(i-14)*100, 593, 98, 20);
+            obj3.setBounds(801-(i-14)*100, 588, 98, 15);
+            window.add(levelDisplays.get(i));
+            JTextArea obj4 = levelDisplays.get(i);
+            obj4.setBounds(801-(i-14)*100, 609, 98, 15);
+            window.add(rentLabel.get(i));
+            JTextArea obj5 = rentLabel.get(i);
+            obj5.setBounds(801-(i-140)*100, 630, 98, 15);
         }
         for (int i = 21; i < 26; i++)
         {
             window.add(propertyList.get(i));
             JTextArea obj = propertyList.get(i);
-            obj.setBounds(201, 551-100*(i-21), 98, 20);
+            obj.setBounds(201, 546-100*(i-21), 98, 15);
             window.add(playersAtSquare.get(i));
             JTextArea obj2 = playersAtSquare.get(i);
-            obj2.setBounds(201, 572-100*(i-21), 98, 20);
+            obj2.setBounds(201, 567-100*(i-21), 98, 15);
             window.add(ownerBoxes.get(i));
             JTextArea obj3 = ownerBoxes.get(i);
-            obj3.setBounds(201, 593-100*(i-21), 98, 20);
+            obj3.setBounds(201, 588-100*(i-21), 98, 15);
+            window.add(levelDisplays.get(i));
+            JTextArea obj4 = levelDisplays.get(i);
+            obj4.setBounds(201, 609-100*(i-21), 98, 15);
+            window.add(rentLabel.get(i));
+            JTextArea obj5 = rentLabel.get(i);
+            obj5.setBounds(201, 630-100*(i-21), 98, 15);
         }
         window.add(dialogueBox);
         dialogueBox.setBounds(1100,0,800,450);
