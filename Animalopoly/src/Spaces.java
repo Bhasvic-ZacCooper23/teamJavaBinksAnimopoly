@@ -24,8 +24,8 @@ public class Spaces {
         name = namer.getSpaceName(this.num);
         info = namer.getSpaceFact(this.num);
         if(this.num == 0 || this.num == 13){
-            upgradePrice = 999999999;
-            upgradeLevel = 999999999;
+            upgradePrice = 99999999;
+            upgradeLevel = 99999999;
             // probably should change this, but it means they can't buy the start and skip a turn spaces.
         }
         else {

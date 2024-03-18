@@ -12,6 +12,8 @@ public class GUI extends JFrame{
     private JComboBox boxMethodSpaces;
     private JComboBox boxListSpaces;
     private JTextPane textPane2;
+    private JTextPane textPane3;
+    private JButton getCardButton;
 
     private ArrayList<Spaces> spacesList= new ArrayList<Spaces>();
 
@@ -67,6 +69,9 @@ public class GUI extends JFrame{
                         textPane2.setText(String.valueOf(spacesList.get(spaceNum).getUpgradeLevel()));
                         break;
                     case 4:
+                        textPane2.setText(String.valueOf(spacesList.get(spaceNum).getRent()));
+                        break;
+                    case 5:
                         spacesList.get(spaceNum).upgrade();
                         textPane2.setText("upgraded");
                         break;
@@ -74,6 +79,16 @@ public class GUI extends JFrame{
                 }
 
 
+            }
+        });
+        getCardButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Cards cardo = new Cards();
+                Random random = new Random();
+                int card = random.nextInt(20);
+                String sting = cardo.getCard(card);
+                textPane3.setText(String.valueOf(sting));
             }
         });
     }

@@ -104,50 +104,69 @@ public class Board {
                         case (0):
                         {
                             player.setSkippedTurn(true);
+                            break;
                         }
                         case (1):
                         {
                             player.setMoney(player.getMoney()-300);
+                            break;
                         }
                         case (2):
                         {
                             player.setMoney(player.getMoney()-500);
+                            break;
                         }
                         case 3:
                             player.setSkippedTurn(true);
+                            break;
                         case 4:
                             player.setMoney(player.getMoney()+200);
+                            break;
                         case 5:
                             player.leaveGame();
+                            break;
                         case 6:
                             player.setMoney(player.getMoney()+2000);
+                            break;
                         case 7:
                             player.setMoney(player.getMoney()-500);
+                            break;
                         case 8:
                             player.setMoney(player.getMoney()-100);
+                            break;
                         case 9:
-
+                            break;
                         case 10:
                             player.setMoney(player.getMoney()+100);
+                            break;
                         case 11:
                             player.setMoney(player.getMoney()+300);
+                            break;
                         case 12:
-
+                            break;
                         case 13:
                             player.setMoney(player.getMoney()+600);
+                            break;
                         case 14:
                             player.setMoney(player.getMoney()-700);
+                            break;
                         case 15:
                             player.setMoney(player.getMoney()-100);
+                            break;
                         case 16:
                             player.setMoney(player.getMoney()-500);
+                            break;
                         case 17:
                             player.setMoney(0);
+                            break;
                         case 18:
                             player.setMoney(player.getMoney()+3000);
+                            break;
                         case 19:
                             player.setMoney(player.getMoney()+50);
+                            break;
                         default:
+                            break;
                     }
                 } else {
                     System.out.println("You rolled a " + (roll1 + roll2));
