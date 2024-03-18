@@ -56,7 +56,7 @@ public class Cards
                 // +£300
                 break;
             case 12:
-                words = "Your stocks are stolen off the blockchain by cybermonkeys, none of it was real anyway so you lose nothing";
+                words = "Monkey attack! Your stocks are stolen off the blockchain by cybermonkeys, none of it was real anyway so you lose nothing";
                 //
                 break;
             case 13:
