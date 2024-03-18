@@ -45,16 +45,16 @@ public class BoardUi {
             obj.setBounds(i*100+201, 51, 98, 15);
             window.add(playersAtSquare.get(i));
             JTextArea obj2 = playersAtSquare.get(i);
-            obj2.setBounds(i*100+201, 72, 98, 15);
+            obj2.setBounds(i*100+201, 67, 98, 15);
             window.add(ownerBoxes.get(i));
             JTextArea obj3 = ownerBoxes.get(i);
-            obj3.setBounds(i*100+201, 93, 98, 15);
+            obj3.setBounds(i*100+201, 83, 98, 15);
             window.add(levelDisplays.get(i));
             JTextArea obj4 = levelDisplays.get(i);
-            obj4.setBounds(i*100+201, 114, 98, 15);
+            obj4.setBounds(i*100+201, 99, 98, 15);
             window.add(rentLabel.get(i));
             JTextArea obj5 = rentLabel.get(i);
-            obj5.setBounds(i*100+201, 135, 98, 15);
+            obj5.setBounds(i*100+201, 115, 98, 15);
         }
         for (int i = 8; i < 14; i++)
         {
@@ -63,52 +63,52 @@ public class BoardUi {
             obj.setBounds(901, 51+100*(i-8), 98, 15);
             window.add(playersAtSquare.get(i));
             JTextArea obj2 = playersAtSquare.get(i);
-            obj2.setBounds(901, 72+100*(i-8), 98, 15);
+            obj2.setBounds(901, 67+100*(i-8), 98, 15);
             window.add(ownerBoxes.get(i));
             JTextArea obj3 = ownerBoxes.get(i);
-            obj3.setBounds(901, 93+100*(i-8), 98, 15);
+            obj3.setBounds(901, 83+100*(i-8), 98, 15);
             window.add(levelDisplays.get(i));
             JTextArea obj4 = levelDisplays.get(i);
-            obj4.setBounds(901, 114+100*(i-8), 98, 15);
+            obj4.setBounds(901, 99+100*(i-8), 98, 15);
             window.add(rentLabel.get(i));
             JTextArea obj5 = rentLabel.get(i);
-            obj5.setBounds(901, 135+100*(i-8), 98, 15);
+            obj5.setBounds(901, 115+100*(i-8), 98, 15);
         }
         for (int i = 14; i < 21; i++)
         {
             window.add(propertyList.get(i));
             JTextArea obj = propertyList.get(i);
-            obj.setBounds(801-(i-14)*100, 546, 98, 15);
+            obj.setBounds(801-(i-14)*100, 551, 98, 15);
             window.add(playersAtSquare.get(i));
             JTextArea obj2 = playersAtSquare.get(i);
             obj2.setBounds(801-(i-14)*100, 567, 98, 15);
             window.add(ownerBoxes.get(i));
             JTextArea obj3 = ownerBoxes.get(i);
-            obj3.setBounds(801-(i-14)*100, 588, 98, 15);
+            obj3.setBounds(801-(i-14)*100, 583, 98, 15);
             window.add(levelDisplays.get(i));
             JTextArea obj4 = levelDisplays.get(i);
-            obj4.setBounds(801-(i-14)*100, 609, 98, 15);
+            obj4.setBounds(801-(i-14)*100, 599, 98, 15);
             window.add(rentLabel.get(i));
             JTextArea obj5 = rentLabel.get(i);
-            obj5.setBounds(801-(i-140)*100, 630, 98, 15);
+            obj5.setBounds(801-(i-14)*100, 615, 98, 15);
         }
         for (int i = 21; i < 26; i++)
         {
             window.add(propertyList.get(i));
             JTextArea obj = propertyList.get(i);
-            obj.setBounds(201, 546-100*(i-21), 98, 15);
+            obj.setBounds(201, 551-100*(i-21), 98, 15);
             window.add(playersAtSquare.get(i));
             JTextArea obj2 = playersAtSquare.get(i);
             obj2.setBounds(201, 567-100*(i-21), 98, 15);
             window.add(ownerBoxes.get(i));
             JTextArea obj3 = ownerBoxes.get(i);
-            obj3.setBounds(201, 588-100*(i-21), 98, 15);
+            obj3.setBounds(201, 583-100*(i-21), 98, 15);
             window.add(levelDisplays.get(i));
             JTextArea obj4 = levelDisplays.get(i);
-            obj4.setBounds(201, 609-100*(i-21), 98, 15);
+            obj4.setBounds(201, 599-100*(i-21), 98, 15);
             window.add(rentLabel.get(i));
             JTextArea obj5 = rentLabel.get(i);
-            obj5.setBounds(201, 630-100*(i-21), 98, 15);
+            obj5.setBounds(201, 615-100*(i-21), 98, 15);
         }
         window.add(dialogueBox);
         dialogueBox.setBounds(1100,0,800,450);
