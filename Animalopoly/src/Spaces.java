@@ -13,6 +13,8 @@ public class Spaces {
     private int upgradePrice;
     // Stores the current level, starting at 0.
     private int upgradeLevel = 0;
+    // Stores the rent based of the upgrade level
+    private int rent = 0;
     // Makes a SpacesInfo object to pull all info needed from
     SpacesInfo namer = new SpacesInfo();
 
@@ -30,24 +32,25 @@ public class Spaces {
             upgradePrice = namer.setBasePrice();
         }
     }
+
     // Prints the name. (probably not needed).
     public void printName() {System.out.println(name);}
+
     // Returns the name.
     public String getName(){return name;}
+
     // Prints the Facts. (probably not needed).
-    public void printInfo() {
-        System.out.println(info);
-    }
+    public void printInfo() {System.out.println(info);}
+
     // Returns the Facts.
-    public String getInfo(){
-        return info;
-    }
+    public String getInfo(){return info;}
 
     // Adds 1 to the level, max level is 4, also changes the upgrade price to the next one. (might need to mess around with the order of this).
     public void upgrade() {
-        if (upgradeLevel != 4) {
+        if (upgradeLevel != 4 && num != 0 && num != 13) {
             setUpgradePrice(namer.setUpgradePrice(upgradeLevel));
             upgradeLevel = upgradeLevel + 1;
+            rent = namer.getRent(upgradeLevel);
         }
     }
 
@@ -55,17 +58,13 @@ public class Spaces {
     public int getUpgradePrice(){return upgradePrice;}
 
     // Sets new upgrade price.
-    public void setUpgradePrice(int upgradePrice) {
-        this.upgradePrice = upgradePrice;
-    }
+    public void setUpgradePrice(int upgradePrice) {this.upgradePrice = upgradePrice;}
 
     // Returns the current level
     public int getUpgradeLevel(){return upgradeLevel;}
 
     // Sets a new upgrade level
-    public void setUpgradeLevel(int upgradeLevel) {
-        this.upgradeLevel = upgradeLevel;
-    }
+    public void setUpgradeLevel(int upgradeLevel) {this.upgradeLevel = upgradeLevel;}
 
     // Sets the owner via player number
     public void setOwner(int ownNum){owner = ownNum;}
