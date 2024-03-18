@@ -14,6 +14,10 @@ public class GUI extends JFrame{
     private JTextPane textPane2;
     private JTextPane textPane3;
     private JButton getCardButton;
+    private JSlider slider1;
+    private JProgressBar progressBar1;
+    private JSpinner spinner1;
+    private JScrollBar scrollBar1;
 
     private ArrayList<Spaces> spacesList= new ArrayList<Spaces>();
 
