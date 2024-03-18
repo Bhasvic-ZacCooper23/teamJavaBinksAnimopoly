@@ -89,6 +89,8 @@ public class Cards
                 break;
             default:
                 words = "MAJOR CARD ERRREREOR";
+                // ERROR
+                break;
         }
         return words;
     }
