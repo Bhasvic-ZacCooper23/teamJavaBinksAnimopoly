@@ -1,3 +1,5 @@
+import java.awt.*;
+import java.util.Random;
 /**
  * The Players class represents a player in the Animalopoly game.
  */
@@ -10,7 +12,8 @@ public class Players {
     private int position;
     private int die;
 
-
+    public Random random = new Random();
+    private Color colour = new Color(random.nextInt(255),random.nextInt(255),random.nextInt(255));
  
     /**
      * Sets the name of the player.
@@ -127,5 +130,10 @@ public class Players {
     public void rolledDice(){
         Die die = new Die();
         this.die = die.roll();
+    }
+
+    public Color getColour()
+    {
+        return colour;
     }
 }
