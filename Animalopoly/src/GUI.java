@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class GUI extends JFrame{
     private JButton Dice;
@@ -31,7 +32,12 @@ public class GUI extends JFrame{
             int result1 = dice.roll();
             int result2 = dice.roll();
             if (result1 == result2){
-                textPane1.setText(String.valueOf(result1 + "+" + result2 + "=" + (result1 + result2) + "\n DOUBLE"));
+                Cards cardo = new Cards();
+                Random random = new Random();
+                int card = random.nextInt(20);
+                String sting = cardo.getCard(card);
+                textPane1.setText(String.valueOf(result1 + "+" + result2 + "=" + (result1 + result2) + "\nDOUBLE" + "\n\n" + sting));
+
             }
             else{
                 textPane1.setText(String.valueOf(result1 + "+" + result2 + "=" + (result1 + result2)));
