@@ -29,7 +29,7 @@ public class Spaces {
             // probably should change this, but it means they can't buy the start and skip a turn spaces.
         }
         else {
-            upgradePrice = namer.setBasePrice();
+            upgradePrice = namer.setBasePrice()*(num/3);
         }
     }
 
@@ -50,7 +50,7 @@ public class Spaces {
         if (upgradeLevel != 4 && num != 0 && num != 13) {
             setUpgradePrice(namer.setUpgradePrice(upgradeLevel));
             upgradeLevel = upgradeLevel + 1;
-            rent = namer.getRent(upgradeLevel);
+            rent = namer.getRent(upgradeLevel)+100*(num/3);
         }
     }
 

@@ -1,7 +1,6 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
-import java.util.Locale;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -10,8 +9,6 @@ public class Board {
     ArrayList<Spaces> spaces = new ArrayList<>();
     ArrayList<Players> players = new ArrayList<>();
     Cards cards = new Cards();
-    // initialise the won bool
-    Boolean won = false;
     // initialises the scanner, always useful
     Scanner scanner = new Scanner(System.in);
     // initialise the ui
@@ -58,7 +55,7 @@ public class Board {
     }
     public Boolean go;
     public int choice;
-    public void doATurn(int playerNum) throws InterruptedException {
+    public void doATurn(int playerNum) {
         // assign player to the current player's object
         Players player = players.get(playerNum);
         // check they haven't lost
@@ -82,7 +79,7 @@ public class Board {
                 });
                 while (!go)
                 {
-                    System.out.println("");
+                    System.out.println();
                 }
                 ui.button1.setText("");
                 Die dice = new Die();
@@ -95,7 +92,7 @@ public class Board {
                     ui.dialogueBox.setText(ui.dialogueBox.getText()+"\nYou rolled a " + (roll1 + roll2) + "!\nand it was a double!");
                     // get a card
                     Random random = new Random();
-                    int cardNum = random.nextInt(11);
+                    int cardNum = random.nextInt(21);
                     System.out.println(cards.getCard(cardNum));
                     ui.dialogueBox.setText(ui.dialogueBox.getText()+"\n"+cards.getCard(cardNum));
                     //performs card's action
@@ -295,7 +292,7 @@ public class Board {
                     {
                         if(spaces.get(i).getOwner()==playerNum)
                         {
-                            spaces.get(i).setOwner(5);
+                            spaces.get(i).setUpgradeLevel(0);
                         }
                     }
                     player.leaveGame();
@@ -309,13 +306,18 @@ public class Board {
                 player.setSkippedTurn(false);
             }
             ui.button1.setText("End Go?");
-            ui.button2.setText("");
+            ui.button2.setText("Concede");
             go = false;
+            choice = 0;
             System.out.println("Press enter to end your go.");
-            ui.dialogueBox.setText(ui.dialogueBox.getText()+"\nPress button to end your go.");
-            while (!go)
+            ui.dialogueBox.setText(ui.dialogueBox.getText()+"\nPress button to end your go, or press concede to leave the game.");
+            while(!go && choice == 0)
             {
                 System.out.println("");
+            }
+            if (choice == 1)
+            {
+                player.leaveGame();
             }
         }
     }

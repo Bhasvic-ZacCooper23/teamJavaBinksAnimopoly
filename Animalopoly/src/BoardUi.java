@@ -114,8 +114,8 @@ public class BoardUi {
         dialogueBox.setBounds(1100,0,800,450);
         window.add(button1);
         window.add(button2);
-        button1.setBounds(1100,500,500,200);
-        button2.setBounds(1100,700,500,200);
+        button1.setBounds(1100,500,300,200);
+        button2.setBounds(1100,700,300,200);
         window.add(DC);
         for (int i = 0; i < board.players.size(); i++)
         {
