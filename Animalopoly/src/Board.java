@@ -185,7 +185,7 @@ public class Board {
                 }
                 else if(position == 26)
                 {
-                    player.setPosition(position - 26);
+                    player.setPosition(0);
                     System.out.println("You landed on go! Collect 1000");
                     ui.dialogueBox.setText(ui.dialogueBox.getText()+"\nYou landed on go! Collect 1000");
                     player.setMoney(player.getMoney()+1000);
