@@ -24,7 +24,7 @@ public class Board {
         Boolean valid = false;
         System.out.println("How many players?");
         int lim = Integer.parseInt(scanner.nextLine());
-        if(lim<4 && lim>1)
+        if(lim<5 && lim>1)
         {
             valid = true;
         }
