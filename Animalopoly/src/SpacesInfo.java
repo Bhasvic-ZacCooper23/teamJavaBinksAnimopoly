@@ -326,7 +326,7 @@ public class SpacesInfo {
                         "\n" +
                         "What? Zebras are African equines with distinctive black-and-white striped coats.\n" +
                         "\n" +
-                        "Where? Eastern Africa including the Horn;[24] arid and semiarid grasslands and shrublands.\n" +
+                        "Where? Eastern Africa including the Horn; arid and semiarid grasslands and shrublands.\n" +
                         "\n" +
                         "How big? Body length of 250–300 cm (98–118 in) with 38–75 cm (15–30 in) tail, 125–160 cm (4.10–5.25 ft) shoulder height and weighs 352–450 kg (776–992 lb).\n" +
                         "\n" +
