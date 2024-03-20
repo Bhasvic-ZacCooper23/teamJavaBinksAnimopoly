@@ -13,8 +13,6 @@ public class Board {
     Scanner scanner = new Scanner(System.in);
     // initialise the ui
     BoardUi ui = new BoardUi();
-
-    main.java.NewJFrame jFrame = new main.java.NewJFrame();
     public void initialise()
     {
         // add 26 spaces
