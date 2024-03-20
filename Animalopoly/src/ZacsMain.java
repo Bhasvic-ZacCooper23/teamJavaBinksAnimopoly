@@ -31,8 +31,8 @@ public class ZacsMain {
                 numberOfPlayersLost = i;
             }
         }
-        board.ui.dialogueBox.setText("Player "+ i +" has won!"+"\nGreat job "+board.players.get(i-1).getName()+"!");
-        board.ui.dialogueBox.setBackground(board.players.get(i-1).getColour());
+        board.ui.dialogueBox.setText("Player "+ i +" has won!"+"\nGreat job "+board.players.get(i).getName()+"!");
+        board.ui.dialogueBox.setBackground(board.players.get(i).getColour());
         board.ui.button1.setText("");
     }
 }

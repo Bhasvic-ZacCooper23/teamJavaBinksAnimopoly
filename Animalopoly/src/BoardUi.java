@@ -127,7 +127,6 @@ public class BoardUi {
             JTextArea obj6 = priceMarker.get(i);
             obj6.setBounds(201, 631-100*(i-21), 98, 15);
         }
-        window.setBackground(new java.awt.Color(255, 153, 153));
         window.add(dialogueBox);
         dialogueBox.setBounds(1100,0,800,450);
         window.add(button1);

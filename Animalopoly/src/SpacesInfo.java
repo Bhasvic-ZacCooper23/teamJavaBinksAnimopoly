@@ -371,7 +371,7 @@ public class SpacesInfo {
                 price = 0;
                 break;
         }
-        return price * (num/4);
+        return price * (num/4+1);
     }
 
     // returns the rent the space now has via level
@@ -394,6 +394,6 @@ public class SpacesInfo {
                 rent = 999;
                 break;
         }
-        return rent*(num/5);
+        return rent*(num/5+1);
     }
 }
