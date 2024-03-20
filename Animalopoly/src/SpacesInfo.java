@@ -352,9 +352,9 @@ public class SpacesInfo {
     }
 
     // Returns the new price needed to upgrade the space (pretty much all placeholder numbers)
-    public int setUpgradePrice(int num){
+    public int setUpgradePrice(int level, int num){
         int price;
-        switch (num){
+        switch (level){
             case 0:
                 price = 10;
                 break;
@@ -371,11 +371,11 @@ public class SpacesInfo {
                 price = 0;
                 break;
         }
-        return price;
+        return price * (num/4);
     }
 
     // returns the rent the space now has via level
-    public int getRent(int level){
+    public int getRent(int level, int num){
         int rent;
         switch(level){
             case 0:
@@ -394,6 +394,6 @@ public class SpacesInfo {
                 rent = 999;
                 break;
         }
-        return rent;
+        return rent*(num/5);
     }
 }

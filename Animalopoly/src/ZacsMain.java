@@ -3,9 +3,9 @@ public class ZacsMain {
         //create the board
         Board board = new Board();
         //call the board method
-        board.intitialise();
+        board.initialise();
         board.ui.start(board);
-        board.ui.dialogueBox.setText("Hello");
+        //board.jFrame.setVisible(true);
         int numberOfPlayersLost = 0;
         //until someone has won
         while(numberOfPlayersLost<3)
@@ -31,7 +31,7 @@ public class ZacsMain {
                 numberOfPlayersLost = i;
             }
         }
-        board.ui.dialogueBox.setText("Player "+ i +" has won!"+"\nGreat job "+board.players.get(i).getName()+"!");
+        board.ui.dialogueBox.setText("Player "+ i +" has won!"+"\nGreat job "+board.players.get(i-1).getName()+"!");
         board.ui.dialogueBox.setBackground(board.players.get(i-1).getColour());
         board.ui.button1.setText("");
     }

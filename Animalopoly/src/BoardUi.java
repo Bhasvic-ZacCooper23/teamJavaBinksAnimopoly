@@ -10,6 +10,7 @@ public class BoardUi {
     ArrayList<JTextArea> ownerBoxes = new ArrayList<JTextArea>();
     ArrayList<JTextArea> levelDisplays = new ArrayList<JTextArea>();
     ArrayList<JTextArea> rentLabel = new ArrayList<JTextArea>();
+    ArrayList<JTextArea> priceMarker = new ArrayList<JTextArea>();
     public void start(Board board)
     {
         for (int i = 0; i < 26; i++)
@@ -31,6 +32,10 @@ public class BoardUi {
         for (int i = 0; i < 26; i++)
         {
             rentLabel.add(new JTextArea());
+        }
+        for (int i = 0; i < 26; i++)
+        {
+            priceMarker.add(new JTextArea("Price: "+board.spaces.get(i).getUpgradePrice()));
         }
         JFrame window = new JFrame();
         window.setTitle("Animopoly");
@@ -55,6 +60,9 @@ public class BoardUi {
             window.add(rentLabel.get(i));
             JTextArea obj5 = rentLabel.get(i);
             obj5.setBounds(i*100+201, 115, 98, 15);
+            window.add(priceMarker.get(i));
+            JTextArea obj6 = priceMarker.get(i);
+            obj6.setBounds(i*100+201, 131, 98, 15);
         }
         for (int i = 8; i < 14; i++)
         {
@@ -73,6 +81,9 @@ public class BoardUi {
             window.add(rentLabel.get(i));
             JTextArea obj5 = rentLabel.get(i);
             obj5.setBounds(901, 115+100*(i-8), 98, 15);
+            window.add(priceMarker.get(i));
+            JTextArea obj6 = priceMarker.get(i);
+            obj6.setBounds(901, 131+100*(i-8), 98, 15);
         }
         for (int i = 14; i < 21; i++)
         {
@@ -91,6 +102,9 @@ public class BoardUi {
             window.add(rentLabel.get(i));
             JTextArea obj5 = rentLabel.get(i);
             obj5.setBounds(801-(i-14)*100, 615, 98, 15);
+            window.add(priceMarker.get(i));
+            JTextArea obj6 = priceMarker.get(i);
+            obj6.setBounds(801-(i-14)*100, 631, 98, 15);
         }
         for (int i = 21; i < 26; i++)
         {
@@ -109,13 +123,17 @@ public class BoardUi {
             window.add(rentLabel.get(i));
             JTextArea obj5 = rentLabel.get(i);
             obj5.setBounds(201, 615-100*(i-21), 98, 15);
+            window.add(priceMarker.get(i));
+            JTextArea obj6 = priceMarker.get(i);
+            obj6.setBounds(201, 631-100*(i-21), 98, 15);
         }
+        window.setBackground(new java.awt.Color(255, 153, 153));
         window.add(dialogueBox);
         dialogueBox.setBounds(1100,0,800,450);
         window.add(button1);
         window.add(button2);
-        button1.setBounds(1100,500,300,200);
-        button2.setBounds(1100,700,300,200);
+        button1.setBounds(1100,500,400,200);
+        button2.setBounds(1100,700,400,200);
         window.add(DC);
         for (int i = 0; i < board.players.size(); i++)
         {

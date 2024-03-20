@@ -14,7 +14,8 @@ public class Board {
     // initialise the ui
     BoardUi ui = new BoardUi();
 
-    public void intitialise()
+    main.java.NewJFrame jFrame = new main.java.NewJFrame();
+    public void initialise()
     {
         // add 26 spaces
         for (int i = 0; i < 26; i++) {
@@ -228,6 +229,8 @@ public class Board {
                             ui.ownerBoxes.get(player.getPosition()).setText("Owned by: "+player.getName());
                             ui.ownerBoxes.get(player.getPosition()).setBackground(player.getColour());
                             ui.levelDisplays.get(player.getPosition()).setText("Level: "+space.getUpgradeLevel());
+                            ui.rentLabel.get(player.getPosition()).setText("To view: "+space.getRent());
+                            ui.priceMarker.get(player.getPosition()).setText("Price: "+space.getUpgradePrice());
                             //display the rent of the space
                             System.out.println("This exhibit will cost " + space.getRent() + " to view");
                             ui.dialogueBox.setText(ui.dialogueBox.getText()+"\nThis exhibit will cost " + space.getRent() + " to view");
@@ -261,6 +264,8 @@ public class Board {
                             //display the rent of the space
                             System.out.println("This exhibit will cost " + space.getRent() + " to view");
                             ui.dialogueBox.setText(ui.dialogueBox.getText()+"\nThis exhibit will cost " + space.getRent() + " to view");
+                            ui.rentLabel.get(player.getPosition()).setText("To view: "+space.getRent());
+                            ui.priceMarker.get(player.getPosition()).setText("Price: "+space.getUpgradePrice());
                         } else {
                             //tell them they don't have enough
                             System.out.println("Sorry you don't have enough money!");
@@ -319,6 +324,7 @@ public class Board {
             {
                 player.leaveGame();
             }
+            ui.button2.setText("");
         }
     }
 }

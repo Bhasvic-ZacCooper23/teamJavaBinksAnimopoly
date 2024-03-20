@@ -1,5 +1,3 @@
-import org.w3c.dom.ls.LSOutput;
-
 public class Spaces {
     // Stores the space's position, 0 being the start, to 25 being zebra.
     private int num;
@@ -48,14 +46,17 @@ public class Spaces {
     // Adds 1 to the level, max level is 4, also changes the upgrade price to the next one. (might need to mess around with the order of this).
     public void upgrade() {
         if (upgradeLevel != 4 && num != 0 && num != 13) {
-            setUpgradePrice(namer.setUpgradePrice(upgradeLevel));
+            setUpgradePrice(namer.setUpgradePrice(upgradeLevel,0));
             upgradeLevel = upgradeLevel + 1;
-            rent = namer.getRent(upgradeLevel)+100*(num/3);
+            rent = namer.getRent(upgradeLevel,0)+100*(num/3);
         }
     }
 
     // Returns the upgrade price.
-    public int getUpgradePrice(){return upgradePrice;}
+    public int getUpgradePrice()
+    {
+        return namer.setUpgradePrice(upgradeLevel,num);
+    }
 
     // Sets new upgrade price.
     public void setUpgradePrice(int upgradePrice) {this.upgradePrice = upgradePrice;}
@@ -73,5 +74,5 @@ public class Spaces {
     public int getOwner(){return owner;}
 
     // Returns the money a player will have to pay if they land on this space, level 0 means rent is 0.
-    public int getRent(){return namer.getRent(upgradeLevel);}
+    public int getRent(){return namer.getRent(upgradeLevel,num);}
 }
