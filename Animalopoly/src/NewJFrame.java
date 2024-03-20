@@ -1127,7 +1127,6 @@ public class NewJFrame extends javax.swing.JFrame {
             {
                 NewJFrame jFrame = new NewJFrame();
                 jFrame.setVisible(true);
-                    jFrame.jLabel25.setText(Integer.toString(19));
             }
         });
     }
