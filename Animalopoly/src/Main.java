@@ -1,4 +1,4 @@
-public class ZacsMain {
+public class Main {
     public static void main(String[] args) throws InterruptedException {
         //create the board
         Board board = new Board();
@@ -8,8 +8,9 @@ public class ZacsMain {
         //board.jFrame.setVisible(true);
         int numberOfPlayersLost = 0;
         //until someone has won
-        while(numberOfPlayersLost<3)
+        while(numberOfPlayersLost<(board.players.size()-1))
         {
+            numberOfPlayersLost = 0;
             for (int i = 0; i < board.players.size(); i++)
             {
                 if(board.players.get(i).getLost())
@@ -23,16 +24,16 @@ public class ZacsMain {
                 board.doATurn(i);
             }
         }
-        int i;
+        int i, winner = 0;
         for (i = 0; i < board.players.size(); i++)
         {
             if(!board.players.get(i).getLost())
             {
-                numberOfPlayersLost = i;
+                winner = i;
             }
         }
-        board.ui.dialogueBox.setText("Player "+ i +" has won!"+"\nGreat job "+board.players.get(i).getName()+"!");
-        board.ui.dialogueBox.setBackground(board.players.get(i).getColour());
+        board.ui.dialogueBox.setText("Player "+ i +" has won!"+"\nGreat job "+board.players.get(winner).getName()+"!");
+        board.ui.dialogueBox.setBackground(board.players.get(winner).getColour());
         board.ui.button1.setText("");
     }
 }
